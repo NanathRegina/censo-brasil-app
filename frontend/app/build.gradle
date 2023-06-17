@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace 'com.app'
+    namespace 'com.censobrasilapp'
     compileSdk 33
 
     defaultConfig {
@@ -32,6 +32,7 @@ android {
     }
     buildFeatures {
         viewBinding true
+        dataBinding true
     }
 }
 
