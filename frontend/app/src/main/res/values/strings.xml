@@ -4,6 +4,12 @@
     <!-- Strings used for fragments for navigation -->
     <string name="inicio_label">Início</string>
     <string name="faces_label">Faces</string>
+    <string name="adc_face_label">Adicionar face</string>
+    <string name="quadra_text">Quadra</string>
+    <string name="face_text">Face</string>
+    <string name="logradouro_text">Logradouro</string>
+    <string name="cep_text">CEP</string>
+    <string name="bairro_text">Bairro</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 

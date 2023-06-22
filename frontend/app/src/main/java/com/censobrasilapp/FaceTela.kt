@@ -6,29 +6,29 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.censobrasilapp.databinding.FragmentSecondBinding
+import com.censobrasilapp.databinding.FaceTelaBinding
+import com.google.android.material.progressindicator.LinearProgressIndicator
 
-class SecondFragment : Fragment() {
+class FaceTela : Fragment() {
 
-    private var _binding: FragmentSecondBinding? = null
+    private var _binding: FaceTelaBinding? = null
     private val binding get() = _binding!!
+    lateinit var linear: LinearProgressIndicator
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = FragmentSecondBinding.inflate(inflater, container, false)
+        _binding = FaceTelaBinding.inflate(inflater, container, false)
         return binding.root
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonSecond.setOnClickListener {
-            findNavController().navigate(R.id.action_SecondFragment_to_FaceTela)
-        }
+        //binding.indicator.setProgressCompat(50, true)
+        //linear.setProgressCompat(50, true)
     }
 
     override fun onDestroyView() {

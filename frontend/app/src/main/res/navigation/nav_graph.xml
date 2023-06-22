@@ -22,7 +22,14 @@
         tools:layout="@layout/fragment_second">
 
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_SecondFragment_to_FaceTela"
+            app:destination="@id/FaceTela" />
+    </fragment>
+    <fragment
+        android:id="@+id/FaceTela"
+        android:name="com.censobrasilapp.FaceTela"
+        android:label="@string/adc_face_label"
+        tools:layout="@layout/face_tela">
+
     </fragment>
 </navigation>
