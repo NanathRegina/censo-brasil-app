@@ -27,6 +27,9 @@ class FaceTela : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.proximoFaceBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_FaceTela_to_UnidadeTela)
+        }
         //binding.indicator.setProgressCompat(50, true)
         //linear.setProgressCompat(50, true)
     }

@@ -31,5 +31,15 @@
         android:label="@string/adc_face_label"
         tools:layout="@layout/face_tela">
 
+        <action
+            android:id="@+id/action_FaceTela_to_UnidadeTela"
+            app:destination="@id/UnidadeTela" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/UnidadeTela"
+        android:name="com.censobrasilapp.UnidadeTela"
+        android:label="@string/adc_unidade_label"
+        tools:layout="@layout/unidade_tela">
     </fragment>
 </navigation>

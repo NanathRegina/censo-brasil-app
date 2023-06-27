@@ -1,16 +1,31 @@
 <resources>
     <string name="app_name">censoBrasilApp</string>
-    <string name="action_settings">Settings</string>
-    <!-- Strings used for fragments for navigation -->
+    <string name="action_config">Configurações</string>
+    <!-- Tela de início -->
     <string name="inicio_label">Início</string>
+
+    <!-- Tela de faces -->
     <string name="faces_label">Faces</string>
+    <string name="previous">Previous</string>
+
+    <!-- Tela adicionar face -->
     <string name="adc_face_label">Adicionar face</string>
     <string name="quadra_text">Quadra</string>
     <string name="face_text">Face</string>
     <string name="logradouro_text">Logradouro</string>
     <string name="cep_text">CEP</string>
     <string name="bairro_text">Bairro</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
+    <string name="check_unidade_text">Nenhuma unidade a declarar</string>
+    <string name="proximo_text">Próximo</string>
+
+    <!-- Tela adicionar unidade -->
+    <string name="adc_unidade_label">Adicionar unidade</string>
+    <string name="id_text">Existe identificação?</string>
+    <string name="numero_text">Número</string>
+    <string name="mod_text">Modificador</string>
+    <string name="ref_text">Referência</string>
+    <string name="complemento_text">Complementos</string>
+
+
 
 </resources>
