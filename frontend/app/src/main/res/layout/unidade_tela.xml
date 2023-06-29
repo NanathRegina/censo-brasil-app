@@ -70,6 +70,7 @@
             >
 
             <AutoCompleteTextView
+                android:id="@+id/mod_auto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="none" />
@@ -97,6 +98,7 @@
             >
 
             <AutoCompleteTextView
+                android:id="@+id/ref_auto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="none" />
