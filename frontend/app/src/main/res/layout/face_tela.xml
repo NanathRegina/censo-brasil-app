@@ -30,8 +30,9 @@
             tools:ignore="MissingConstraints"
             android:layout_marginTop="120dp"
             android:layout_marginStart="50dp">
-
+            TextInputEditText
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/quadra_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -64,6 +65,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
 
         <AutoCompleteTextView
+            android:id="@+id/logradouro_auto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="none" />
@@ -105,6 +107,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
 
             <AutoCompleteTextView
+                android:id="@+id/bairro_auto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="none" />
