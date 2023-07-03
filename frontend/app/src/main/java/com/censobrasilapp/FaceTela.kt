@@ -2,7 +2,7 @@ package com.censobrasilapp
 
 import android.content.Context
 import android.os.Bundle
-import android.util.Log
+import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -22,7 +22,7 @@ class FaceTela : Fragment() {
     private val items_logradouro = listOf("Rua Hipódromo", "Rua Inácio de Araújo", "Rua 21 de Abril", "Avenida Celso Garcia")
     private val items_bairro = listOf("Brás", "Ipiranga") //banco de dados
 
-    private var text: TextInputLayout? = null
+    var res = false
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -41,11 +41,8 @@ class FaceTela : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.proximoFaceBtn.setOnClickListener {
-            val textInputLayout: TextInputLayout = view.findViewById(R.id.quadra_input)
-            val text: String = textInputLayout.editText?.text.toString()
-
-            Log.i("alo", text)
-            findNavController().navigate(R.id.action_FaceTela_to_UnidadeTela)
+            if(validaCampos(view)){
+            findNavController().navigate(R.id.action_FaceTela_to_UnidadeTela)}
         }
 
         binding.logradouroAuto.apply {
@@ -69,7 +66,31 @@ class FaceTela : Fragment() {
         }
     }
 
+    private fun validaCampos(view: View): Boolean {
+        val textInputLayout: TextInputLayout = view.findViewById(R.id.quadra_input)
+        val quadra: String = textInputLayout.editText?.text.toString()
 
+        //Log.i("alo", quadra)
+        /*
+        if (verificaCampoVazio(quadra).also { res = it }) {
+            binding.quadraInput.requestFocus()
+            binding.quadraInput.seterror
+            return false
+        }
+        return true
+    }
+
+ */
+        if (verificaCampoVazio(quadra).also { res = it }) {
+            binding.quadraInput.requestFocus()
+            binding.quadraInput.error = "Error"
+            return false
+        }
+        return true
+    }
+    private fun verificaCampoVazio(valor: String): Boolean {
+        return TextUtils.isEmpty(valor) || valor.trim { it <= ' ' }.isEmpty()
+    }
 
     override fun onDestroyView() {
         super.onDestroyView()

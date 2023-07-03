@@ -58,16 +58,6 @@ class UnidadeTela : Fragment() {
             )
         }
 
-        binding.modAuto.apply {
-            setAdapter(
-                ArrayAdapter(
-                    activityContext,
-                    R.layout.dropdown_id,
-                    items_mod
-                )
-            )
-        }
-
         binding.refAuto.apply {
             setAdapter(
                 ArrayAdapter(

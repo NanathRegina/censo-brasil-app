@@ -29,10 +29,10 @@
             android:hint="@string/quadra_text"
             tools:ignore="MissingConstraints"
             android:layout_marginTop="120dp"
-            android:layout_marginStart="50dp">
-            TextInputEditText
+            android:layout_marginStart="50dp"
+            app:errorEnabled="true">
+
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/quadra_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
