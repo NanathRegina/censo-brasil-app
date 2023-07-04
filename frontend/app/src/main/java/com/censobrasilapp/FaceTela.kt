@@ -2,7 +2,10 @@ package com.censobrasilapp
 
 import android.content.Context
 import android.os.Bundle
+import android.text.Editable
 import android.text.TextUtils
+import android.text.TextWatcher
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +13,9 @@ import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.censobrasilapp.databinding.FaceTelaBinding
+import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
+import java.util.Random
 
 
 class FaceTela : Fragment() {
@@ -21,6 +26,7 @@ class FaceTela : Fragment() {
     //banco de dados
     private val items_logradouro = listOf("Rua Hipódromo", "Rua Inácio de Araújo", "Rua 21 de Abril", "Avenida Celso Garcia")
     private val items_bairro = listOf("Brás", "Ipiranga") //banco de dados
+    private val items_quadra = listOf("001", "002", "003", "004", "005")
 
     var res = false
 
@@ -39,10 +45,34 @@ class FaceTela : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val myRandom = Random()
+        val cepEditText: TextInputEditText = view.findViewById(R.id.cep_text)
 
-        binding.proximoFaceBtn.setOnClickListener {
-            if(validaCampos(view)){
-            findNavController().navigate(R.id.action_FaceTela_to_UnidadeTela)}
+        cepEditText.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                Log.i("before", "oi")
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                Log.i("on", "oi")
+            }
+
+            override fun afterTextChanged(s: Editable) {
+                validaCampos(view)
+                Log.i("after", s.toString())
+            }
+            })
+
+        binding.faceText.setText((myRandom.nextInt(100)).toString())
+
+        binding.quadraAuto.apply {
+            setAdapter(
+                ArrayAdapter(
+                    activityContext,
+                    R.layout.dropdown_id,
+                    items_quadra
+                )
+            )
         }
 
         binding.logradouroAuto.apply {
@@ -64,30 +94,27 @@ class FaceTela : Fragment() {
                 )
             )
         }
+
+        binding.proximoFaceBtn.setOnClickListener {
+                findNavController().navigate(R.id.action_FaceTela_to_UnidadeTela)}
     }
 
     private fun validaCampos(view: View): Boolean {
-        val textInputLayout: TextInputLayout = view.findViewById(R.id.quadra_input)
-        val quadra: String = textInputLayout.editText?.text.toString()
 
-        //Log.i("alo", quadra)
-        /*
-        if (verificaCampoVazio(quadra).also { res = it }) {
-            binding.quadraInput.requestFocus()
-            binding.quadraInput.seterror
+        val cepInputLayout: TextInputLayout = view.findViewById(R.id.cep_input)
+        val cep: String = cepInputLayout.editText?.text.toString()
+
+
+        if (verificaCampoVazio(cep).also { res = it }) {
+            binding.cepInput.requestFocus()
+            binding.cepInput.error = "Error"
+            binding.proximoFaceBtn.isEnabled = false
             return false
         }
+        binding.proximoFaceBtn.isEnabled = true
         return true
     }
 
- */
-        if (verificaCampoVazio(quadra).also { res = it }) {
-            binding.quadraInput.requestFocus()
-            binding.quadraInput.error = "Error"
-            return false
-        }
-        return true
-    }
     private fun verificaCampoVazio(valor: String): Boolean {
         return TextUtils.isEmpty(valor) || valor.trim { it <= ' ' }.isEmpty()
     }
