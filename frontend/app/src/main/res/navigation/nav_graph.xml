@@ -12,19 +12,31 @@
         tools:layout="@layout/fragment_first">
 
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_FirstFragment_to_FacesTela"
+            app:destination="@id/FacesTela" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.censobrasilapp.SecondFragment"
+        android:id="@+id/FacesTela"
+        android:name="com.censobrasilapp.FacesTela"
         android:label="@string/faces_label"
-        tools:layout="@layout/fragment_second">
+        tools:layout="@layout/faces_tela">
 
         <action
-            android:id="@+id/action_SecondFragment_to_FaceTela"
-            app:destination="@id/FaceTela" />
+            android:id="@+id/action_FacesTela_to_MenuPesquisa"
+            app:destination="@id/MenuPesquisa" />
     </fragment>
+
+    <fragment
+        android:id="@+id/MenuPesquisa"
+        android:name="com.censobrasilapp.MenuPesquisa"
+        android:label="@string/pesquisa_label"
+        tools:layout="@layout/menu_pesquisa">
+
+        <action
+            android:id="@+id/action_FaceTela_to_UnidadeTela"
+            app:destination="@id/UnidadeTela" />
+    </fragment>
+
     <fragment
         android:id="@+id/FaceTela"
         android:name="com.censobrasilapp.FaceTela"

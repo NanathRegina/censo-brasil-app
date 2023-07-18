@@ -8,6 +8,13 @@
     <string name="faces_label">Faces</string>
     <string name="previous">Previous</string>
 
+    <!--- Menu pesquisa-->
+    <string name="presencial_text">Presencial</string>
+    <string name="agendamento_text">Agendamento</string>
+    <string name="internet_text">Via internet</string>
+    <string name="nao_possivel_text">Não é possível realizar agora</string>
+    <string name="pesquisa_label">Pesquisa</string>
+
     <!-- Tela adicionar face -->
     <string name="adc_face_label">Adicionar face</string>
     <string name="quadra_text">Quadra</string>

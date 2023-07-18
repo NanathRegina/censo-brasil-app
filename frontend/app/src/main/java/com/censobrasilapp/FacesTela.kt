@@ -6,11 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.censobrasilapp.databinding.FragmentSecondBinding
+import com.censobrasilapp.databinding.FacesTelaBinding
 
-class SecondFragment : Fragment() {
+class FacesTela : Fragment() {
 
-    private var _binding: FragmentSecondBinding? = null
+    private var _binding: FacesTelaBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -18,7 +18,7 @@ class SecondFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = FragmentSecondBinding.inflate(inflater, container, false)
+        _binding = FacesTelaBinding.inflate(inflater, container, false)
         return binding.root
 
     }
@@ -27,7 +27,7 @@ class SecondFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.buttonSecond.setOnClickListener {
-            findNavController().navigate(R.id.action_SecondFragment_to_FaceTela)
+            findNavController().navigate(R.id.action_FacesTela_to_MenuPesquisa)
         }
     }
 
