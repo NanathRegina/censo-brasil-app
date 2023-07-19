@@ -15,6 +15,18 @@
     <string name="nao_possivel_text">Não é possível realizar agora</string>
     <string name="pesquisa_label">Pesquisa</string>
 
+    <!-- Tela de etapas -->
+    <string name="etapas_label">Etapas</string>
+
+    <!-- Tela de pesquisa 1 -->
+    <string name="hint_quantidade">Quantidade</string>
+    <string name="moradores_text">Quantas pessoas moravam neste domicílio em 31 de julho de 2022? </string>
+    <string name="criancas_text">Quantas crianças de zero a nove anos de idades, inclusive recém-nascidos, moravam neste domicílio em 31 de julho de 2022? </string>
+
+    <!-- Tela de pesquisa 2 -->
+    <string name="hint_nome">Nome</string>
+    <string name="hint_sobrenome">Sobrenome</string>
+
     <!-- Tela adicionar face -->
     <string name="adc_face_label">Adicionar face</string>
     <string name="quadra_text">Quadra</string>

@@ -33,8 +33,41 @@
         tools:layout="@layout/menu_pesquisa">
 
         <action
-            android:id="@+id/action_FaceTela_to_UnidadeTela"
-            app:destination="@id/UnidadeTela" />
+            android:id="@+id/action_MenuPesquisa_to_EtapasTela"
+            app:destination="@id/EtapasTela" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/EtapasTela"
+        android:name="com.censobrasilapp.EtapasTela"
+        android:label="@string/etapas_label"
+        tools:layout="@layout/etapas_tela">
+
+        <action
+            android:id="@+id/action_FaceTela_to_PesquisaTela"
+            app:destination="@id/PesquisaTela" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/PesquisaTela"
+        android:name="com.censobrasilapp.PesquisaTela"
+        android:label="@string/pesquisa_label"
+        tools:layout="@layout/pesquisa_tela">
+
+        <action
+            android:id="@+id/action_PesquisaTela_to_MoradorTela"
+            app:destination="@id/MoradorTela" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/MoradorTela"
+        android:name="com.censobrasilapp.MoradorTela"
+        android:label="@string/pesquisa_label"
+        tools:layout="@layout/morador_tela">
+
+        <action
+            android:id="@+id/action_PesquisaTela_to_MoradorTela"
+            app:destination="@id/MoradorTela" />
     </fragment>
 
     <fragment
