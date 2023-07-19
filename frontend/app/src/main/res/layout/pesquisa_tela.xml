@@ -22,18 +22,17 @@
             tools:ignore="MissingConstraints" />
 
         <TextView
-            android:id="@+id/moradores_text"
+            android:id="@+id/text_moradores"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="120dp"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
-            android:padding="5dp"
-            android:text="@string/moradores_text" />
+            android:text="@string/txt_moradores" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/moradores_input"
-            android:layout_below="@+id/moradores_text"
+            android:id="@+id/input_moradores"
+            android:layout_below="@+id/text_moradores"
             android:layout_width="350dp"
             android:layout_height="64dp"
             android:hint="@string/hint_quantidade"
@@ -48,19 +47,18 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
-            android:id="@+id/criancas_text"
-            android:layout_below="@+id/moradores_input"
+            android:id="@+id/text_criancas"
+            android:layout_below="@+id/input_moradores"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="30dp"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
-            android:padding="5dp"
-            android:text="@string/criancas_text" />
+            android:text="@string/txt_criancas" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/criancas_input"
-            android:layout_below="@+id/criancas_text"
+            android:id="@+id/input_criancas"
+            android:layout_below="@+id/text_criancas"
             android:layout_width="350dp"
             android:layout_height="64dp"
             android:hint="@string/hint_quantidade"
@@ -76,12 +74,12 @@
 
         <Button
             android:id="@+id/button_pesquisa"
-            android:layout_below="@+id/criancas_input"
+            android:layout_below="@+id/input_criancas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/proximo_text"
+            android:text="@string/btn_proximo_pesquisa"
             android:layout_marginStart="270dp"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="150dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

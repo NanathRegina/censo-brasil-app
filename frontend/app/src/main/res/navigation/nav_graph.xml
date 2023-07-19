@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.censobrasilapp.FirstFragment"
-        android:label="@string/inicio_label"
-        tools:layout="@layout/fragment_first">
+        android:name="com.censobrasilapp.InicioTela"
+        android:label="@string/inicio_titulo"
+        tools:layout="@layout/inicio">
 
         <action
             android:id="@+id/action_FirstFragment_to_FacesTela"
@@ -18,7 +18,7 @@
     <fragment
         android:id="@+id/FacesTela"
         android:name="com.censobrasilapp.FacesTela"
-        android:label="@string/faces_label"
+        android:label="@string/faces_titulo"
         tools:layout="@layout/faces_tela">
 
         <action
@@ -29,7 +29,7 @@
     <fragment
         android:id="@+id/MenuPesquisa"
         android:name="com.censobrasilapp.MenuPesquisa"
-        android:label="@string/pesquisa_label"
+        android:label="@string/pesquisa_titulo"
         tools:layout="@layout/menu_pesquisa">
 
         <action
@@ -40,7 +40,7 @@
     <fragment
         android:id="@+id/EtapasTela"
         android:name="com.censobrasilapp.EtapasTela"
-        android:label="@string/etapas_label"
+        android:label="@string/etapas_titulo"
         tools:layout="@layout/etapas_tela">
 
         <action
@@ -51,7 +51,7 @@
     <fragment
         android:id="@+id/PesquisaTela"
         android:name="com.censobrasilapp.PesquisaTela"
-        android:label="@string/pesquisa_label"
+        android:label="@string/pesquisa_titulo"
         tools:layout="@layout/pesquisa_tela">
 
         <action
@@ -62,7 +62,7 @@
     <fragment
         android:id="@+id/MoradorTela"
         android:name="com.censobrasilapp.MoradorTela"
-        android:label="@string/pesquisa_label"
+        android:label="@string/pesquisa_titulo"
         tools:layout="@layout/morador_tela">
 
         <action
@@ -73,7 +73,7 @@
     <fragment
         android:id="@+id/FaceTela"
         android:name="com.censobrasilapp.FaceTela"
-        android:label="@string/adc_face_label"
+        android:label="@string/adc_face_titulo"
         tools:layout="@layout/face_tela">
 
         <action

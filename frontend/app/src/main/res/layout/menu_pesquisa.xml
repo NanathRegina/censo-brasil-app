@@ -15,7 +15,7 @@
             android:id="@+id/button_presencial"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/presencial_text"
+            android:text="@string/btn_presencial"
             android:layout_marginTop="120dp"
             android:layout_marginStart="150dp"/>
 
@@ -23,7 +23,7 @@
             android:id="@+id/button_agendamento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/agendamento_text"
+            android:text="@string/btn_agendamento"
             android:layout_marginTop="220dp"
             android:layout_marginStart="140dp" />
 
@@ -31,7 +31,7 @@
             android:id="@+id/button_internet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/internet_text"
+            android:text="@string/btn_internet"
             android:layout_marginTop="320dp"
             android:layout_marginStart="150dp"/>
 
@@ -39,7 +39,7 @@
             android:id="@+id/button_nao_possivel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/nao_possivel_text"
+            android:text="@string/btn_nao_possivel"
             android:layout_marginTop="420dp"
             android:layout_marginStart="100dp"/>
 

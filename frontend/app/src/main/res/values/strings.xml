@@ -1,41 +1,54 @@
 <resources>
     <string name="app_name">censoBrasilApp</string>
     <string name="action_config">Configurações</string>
+
     <!-- Tela de início -->
-    <string name="inicio_label">Início</string>
+    <string name="inicio_titulo">Início</string>
+    <string name="btn_proximo_inicio">Próximo</string>
 
     <!-- Tela de faces -->
-    <string name="faces_label">Faces</string>
-    <string name="previous">Previous</string>
+    <string name="faces_titulo">Faces</string>
+    <string name="btn_proximo_faces">Próximo</string>
 
     <!--- Menu pesquisa-->
-    <string name="presencial_text">Presencial</string>
-    <string name="agendamento_text">Agendamento</string>
-    <string name="internet_text">Via internet</string>
-    <string name="nao_possivel_text">Não é possível realizar agora</string>
-    <string name="pesquisa_label">Pesquisa</string>
+    <string name="pesquisa_titulo">Pesquisa</string>
+
+    <string name="btn_presencial">Presencial</string>
+    <string name="btn_agendamento">Agendamento</string>
+    <string name="btn_internet">Via internet</string>
+    <string name="btn_nao_possivel">Não é possível realizar agora</string>
+
 
     <!-- Tela de etapas -->
-    <string name="etapas_label">Etapas</string>
+    <string name="etapas_titulo">Etapas</string>
+    <string name="btn_proximo_etapas">Próximo</string>
 
     <!-- Tela de pesquisa 1 -->
     <string name="hint_quantidade">Quantidade</string>
-    <string name="moradores_text">Quantas pessoas moravam neste domicílio em 31 de julho de 2022? </string>
-    <string name="criancas_text">Quantas crianças de zero a nove anos de idades, inclusive recém-nascidos, moravam neste domicílio em 31 de julho de 2022? </string>
+    <string name="txt_moradores">Quantas pessoas moravam neste domicílio em 31 de julho de 2022? </string>
+    <string name="txt_criancas">Quantas crianças de zero a nove anos de idades, inclusive recém-nascidos, moravam neste domicílio em 31 de julho de 2022? </string>
+    <string name="btn_proximo_pesquisa">Próximo</string>
 
     <!-- Tela de pesquisa 2 -->
     <string name="hint_nome">Nome</string>
     <string name="hint_sobrenome">Sobrenome</string>
+    <string name="txt_sexo">Sexo</string>
+    <string name="radio_feminino">Feminino</string>
+    <string name="radio_masculino">Masculino</string>
+    <string name="hint_dt_nascimento">Data nascimento</string>
+    <string name="btn_nascimento">Não sabe informar data de nascimento</string>
+    <string name="btn_proximo_morador">Próximo</string>
+
 
     <!-- Tela adicionar face -->
-    <string name="adc_face_label">Adicionar face</string>
+    <string name="adc_face_titulo">Adicionar face</string>
     <string name="quadra_text">Quadra</string>
     <string name="face_text">Face</string>
     <string name="logradouro_text">Logradouro</string>
     <string name="cep_text">CEP</string>
     <string name="bairro_text">Bairro</string>
     <string name="check_unidade_text">Nenhuma unidade a declarar</string>
-    <string name="proximo_text">Próximo</string>
+    <string name="btn_proximo">Próximo</string>
 
     <!-- Tela adicionar unidade -->
     <string name="adc_unidade_label">Adicionar unidade</string>

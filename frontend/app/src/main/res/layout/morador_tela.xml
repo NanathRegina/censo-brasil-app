@@ -22,7 +22,7 @@
             tools:ignore="MissingConstraints" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/nome_input"
+            android:id="@+id/input_nome"
             android:layout_below="@+id/indicator"
             android:hint="@string/hint_nome"
             android:layout_width="350dp"
@@ -38,13 +38,60 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/sobrenome_input"
-            android:layout_below="@+id/nome_input"
+            android:id="@+id/input_sobrenome"
+            android:layout_below="@+id/input_nome"
             android:hint="@string/hint_sobrenome"
             android:layout_width="350dp"
             android:layout_height="64dp"
             tools:ignore="MissingConstraints"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="30dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/text_sexo"
+            android:layout_below="@+id/input_sobrenome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:text="@string/txt_sexo" />
+
+            <RadioGroup
+                android:id="@+id/radio_group_sexo"
+                android:layout_below="@+id/text_sexo"
+                android:orientation="horizontal"
+                android:checkedButton="@+id/radio_button_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp">
+                <RadioButton
+                    android:id="@+id/radio_button_feminino"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radio_feminino"/>
+
+                <RadioButton
+                    android:id="@+id/radio_button_masculino"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/radio_masculino"/>
+            </RadioGroup>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_nascimento"
+            android:layout_below="@+id/radio_group_sexo"
+            android:hint="@string/hint_dt_nascimento"
+            android:layout_width="175dp"
+            android:layout_height="64dp"
+            tools:ignore="MissingConstraints"
+            android:layout_marginTop="15dp"
             android:layout_marginStart="30dp">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -54,13 +101,26 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/button_morador"
-            android:layout_below="@+id/nome_input"
+            android:id="@+id/button_nascimento"
+            android:layout_below="@+id/input_nascimento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/proximo_text"
+            android:text="@string/btn_nascimento"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_morador"
+            android:layout_below="@+id/button_nascimento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_proximo_morador"
             android:layout_marginStart="270dp"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="30dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

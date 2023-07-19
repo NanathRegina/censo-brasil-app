@@ -6,12 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.censobrasilapp.databinding.FragmentFirstBinding
-import com.google.android.material.progressindicator.LinearProgressIndicator
+import com.censobrasilapp.databinding.InicioBinding
 
-class FirstFragment : Fragment() {
+class InicioTela : Fragment() {
 
-    private var _binding: FragmentFirstBinding? = null
+    private var _binding: InicioBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -19,7 +18,7 @@ class FirstFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = FragmentFirstBinding.inflate(inflater, container, false)
+        _binding = InicioBinding.inflate(inflater, container, false)
         return binding.root
 
     }
@@ -27,7 +26,7 @@ class FirstFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonFirst.setOnClickListener {
+        binding.buttonInicio.setOnClickListener {
             findNavController().navigate(R.id.action_FirstFragment_to_FacesTela)
         }
     }

@@ -26,7 +26,7 @@ class FacesTela : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonSecond.setOnClickListener {
+        binding.buttonFaces.setOnClickListener {
             findNavController().navigate(R.id.action_FacesTela_to_MenuPesquisa)
         }
     }
