@@ -66,7 +66,29 @@
         tools:layout="@layout/morador_tela">
 
         <action
-            android:id="@+id/action_PesquisaTela_to_MoradorTela"
+            android:id="@+id/action_MoradorTela_to_InfoMoradorTela"
+            app:destination="@id/InfoMoradorTela" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/InfoMoradorTela"
+        android:name="com.censobrasilapp.InfoMoradorTela"
+        android:label="@string/pesquisa_titulo"
+        tools:layout="@layout/info_morador_tela">
+
+        <action
+            android:id="@+id/action_InfoMoradorTela_to_MoradoresTela"
+            app:destination="@id/MoradoresTela" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/MoradoresTela"
+        android:name="com.censobrasilapp.MoradoresTela"
+        android:label="@string/moradores_titulo"
+        tools:layout="@layout/moradores_tela">
+
+        <action
+            android:id="@+id/action_MoradorTela_to_InfoMoradorTela"
             app:destination="@id/MoradorTela" />
     </fragment>
 

@@ -12,12 +12,10 @@
 
     <!--- Menu pesquisa-->
     <string name="pesquisa_titulo">Pesquisa</string>
-
     <string name="btn_presencial">Presencial</string>
     <string name="btn_agendamento">Agendamento</string>
     <string name="btn_internet">Via internet</string>
     <string name="btn_nao_possivel">Não é possível realizar agora</string>
-
 
     <!-- Tela de etapas -->
     <string name="etapas_titulo">Etapas</string>
@@ -29,7 +27,7 @@
     <string name="txt_criancas">Quantas crianças de zero a nove anos de idades, inclusive recém-nascidos, moravam neste domicílio em 31 de julho de 2022? </string>
     <string name="btn_proximo_pesquisa">Próximo</string>
 
-    <!-- Tela de pesquisa 2 -->
+    <!-- Tela de Morador -->
     <string name="hint_nome">Nome</string>
     <string name="hint_sobrenome">Sobrenome</string>
     <string name="txt_sexo">Sexo</string>
@@ -39,6 +37,22 @@
     <string name="btn_nascimento">Não sabe informar data de nascimento</string>
     <string name="btn_proximo_morador">Próximo</string>
 
+    <!-- Tela de informações adicionais do morador -->
+    <string name="hint_cor">Cor ou raça</string>
+    <string name="txt_ler">Sabe ler e escrever?</string>
+    <string name="radio_sim">Sim</string>
+    <string name="radio_nao">Não</string>
+    <string name="txt_recebimento">Qual era a forma de pagamento normalmente recebido pelo responsável pelo domicílio?</string>
+    <string name="txt_rendimentos">Exemplo de rendimentos: trabalho, aposentadoria, Auxílio Brasil (antigo Bolsa Família) ou outra origem.</string>
+    <string name="radio_valor">Valor em dinheiro, produtos ou mercadorias</string>
+    <string name="radio_moradia">Outra forma(moradia, alimentação, etc)</string>
+    <string name="radio_outro">Não tem</string>
+
+    <!--- Tela de moradores-->
+    <string name="moradores_titulo">Moradores</string>
+    <string name="txt_responsavel">Responsável financeiro pelo domicílio</string>
+    <string name="btn_adc_morador">+</string>
+    <string name="btn_concluido_moradores">Concluído</string>
 
     <!-- Tela adicionar face -->
     <string name="adc_face_titulo">Adicionar face</string>

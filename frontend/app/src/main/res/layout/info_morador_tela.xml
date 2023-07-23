@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.censobrasilapp.InfoMoradorTela">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="16dp"
+            tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_cor"
+            android:layout_below="@+id/indicator"
+            android:hint="@string/hint_cor"
+            android:layout_width="350dp"
+            android:layout_height="64dp"
+            tools:ignore="MissingConstraints"
+            android:layout_marginTop="120dp"
+            android:layout_marginStart="30dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/text_sexo"
+            android:layout_below="@+id/input_cor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:text="@string/txt_ler" />
+
+        <RadioGroup
+            android:id="@+id/radio_group_ler"
+            android:layout_below="@+id/text_sexo"
+            android:orientation="horizontal"
+            android:checkedButton="@+id/radio_button_ler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp">
+            <RadioButton
+                android:id="@+id/radio_button_sim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/radio_sim"/>
+
+            <RadioButton
+                android:id="@+id/radio_button_nao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/radio_nao"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/text_recebimento"
+            android:layout_below="@+id/radio_group_ler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:text="@string/txt_recebimento" />
+
+        <TextView
+            android:id="@+id/text_rendimentos"
+            android:layout_below="@+id/text_recebimento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:text="@string/txt_rendimentos" />
+
+        <RadioGroup
+            android:id="@+id/radio_group_redimentos"
+            android:layout_below="@+id/text_rendimentos"
+            android:orientation="vertical"
+            android:checkedButton="@+id/radio_button_rendimentos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp">
+            <RadioButton
+                android:id="@+id/radio_button_valor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/radio_valor"/>
+
+            <RadioButton
+                android:id="@+id/radio_button_moradia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/radio_moradia"/>
+
+            <RadioButton
+                android:id="@+id/radio_button_outro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/radio_outro"/>
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/button_info_morador"
+            android:layout_below="@+id/radio_group_redimentos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_proximo_morador"
+            android:layout_marginStart="270dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>
