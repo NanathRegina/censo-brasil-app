@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.censobrasilapp.InfoMoradorTela">
+    tools:context="com.censobrasilapp.InfoDomicilioTela">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -21,20 +21,30 @@
             tools:layout_editor_absoluteY="16dp"
             tools:ignore="MissingConstraints" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/input_cor"
+        <TextView
+            android:id="@+id/text_agua"
             android:layout_below="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:text="@string/txt_agua" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_agua"
+            android:layout_below="@+id/text_agua"
             android:layout_width="350dp"
             android:layout_height="64dp"
-            android:hint="@string/hint_cor"
             tools:ignore="MissingConstraints"
-            android:layout_marginTop="120dp"
+            android:layout_marginTop="15dp"
             android:layout_marginStart="30dp"
             app:errorEnabled="true"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
 
             <AutoCompleteTextView
-                android:id="@+id/auto_cor"
+                android:id="@+id/auto_agua"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="none" />
@@ -50,20 +60,20 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
-            android:id="@+id/text_ler"
-            android:layout_below="@+id/input_cor"
+            android:id="@+id/text_rede"
+            android:layout_below="@+id/input_agua"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
-            android:text="@string/txt_ler" />
+            android:text="@string/txt_rede" />
 
         <RadioGroup
-            android:id="@+id/radio_group_ler"
-            android:layout_below="@+id/text_ler"
+            android:id="@+id/radio_group_rede"
+            android:layout_below="@+id/text_rede"
             android:orientation="horizontal"
-            android:checkedButton="@+id/radio_button_ler"
+            android:checkedButton="@+id/radio_button_rede"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp">
@@ -81,58 +91,48 @@
         </RadioGroup>
 
         <TextView
-            android:id="@+id/text_recebimento"
-            android:layout_below="@+id/radio_group_ler"
+            android:id="@+id/text_agua_utilizada"
+            android:layout_below="@+id/radio_group_rede"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
-            android:text="@string/txt_recebimento" />
-
-        <TextView
-            android:id="@+id/text_rendimentos"
-            android:layout_below="@+id/text_recebimento"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp"
-            android:text="@string/txt_rendimentos" />
+            android:text="@string/txt_agua_utilizada" />
 
         <RadioGroup
-            android:id="@+id/radio_group_redimentos"
-            android:layout_below="@+id/text_rendimentos"
+            android:id="@+id/radio_group_agua_utilizada"
+            android:layout_below="@+id/text_agua_utilizada"
             android:orientation="vertical"
-            android:checkedButton="@+id/radio_button_rendimentos"
+            android:checkedButton="@+id/radio_button_agua_utilizada"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp">
             <RadioButton
-                android:id="@+id/radio_button_valor"
+                android:id="@+id/radio_button_dentro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/radio_valor"/>
+                android:text="@string/radio_dentro"/>
 
             <RadioButton
-                android:id="@+id/radio_button_moradia"
+                android:id="@+id/radio_button_fora"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/radio_moradia"/>
+                android:text="@string/radio_fora"/>
 
             <RadioButton
-                android:id="@+id/radio_button_outro"
+                android:id="@+id/radio_button_nao_chega"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/radio_outro"/>
+                android:text="@string/radio_nao_chega"/>
         </RadioGroup>
 
         <Button
-            android:id="@+id/button_info_morador"
-            android:layout_below="@+id/radio_group_redimentos"
+            android:id="@+id/button_info_domicilio"
+            android:layout_below="@+id/radio_group_agua_utilizada"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/btn_proximo_morador"
+            android:text="@string/btn_continuar_domicilio"
             android:layout_marginStart="270dp"
             android:layout_marginTop="30dp"
             app:layout_constraintEnd_toEndOf="parent"

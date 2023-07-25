@@ -2,31 +2,30 @@ package com.censobrasilapp
 
 import android.content.Context
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
-import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.censobrasilapp.databinding.UnidadeTelaBinding
+import com.censobrasilapp.databinding.DemaisInfoDomicilioTelaBinding
 
+class DemaisInfoDomicilioTela : Fragment() {
 
-class UnidadeTela : Fragment() {
-
-    private var _binding: UnidadeTelaBinding? = null
-    private val binding get() = _binding!!
+    private var _binding: DemaisInfoDomicilioTelaBinding? = null
     private lateinit var activityContext: Context
-    private val items_id = listOf("Sim", "Não")
-    private val items_mod = listOf("SN", "FNS", "SMS", "FUNASA", "KM")
-    private val items_ref = listOf("Ao lado da(e)(o)", "Antes da(e)(o)", "Após a(o)", "Em frente a(ao)")
+    private val binding get() = _binding!!
+    private val items_esgoto = listOf("Rede geral ou pluvial", "Ligada à rede", "Não ligada à rede", "Fossa rudimentar ou buraco")
+    private val items_lixo = listOf("Coletado no domicílio por serviço de limpeza", "Depositado em caçamba de serviço de limpeza", "Queimado na propriedade", "Enterrado na propriedade")
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = UnidadeTelaBinding.inflate(inflater, container, false)
+        _binding = DemaisInfoDomicilioTelaBinding.inflate(inflater, container, false)
         return binding.root
+
     }
 
     override fun onAttach(context: Context) {
@@ -37,40 +36,30 @@ class UnidadeTela : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.indicator.setProgressCompat(25, true)
+        binding.indicator.setProgressCompat(90, true)
 
-        binding.idAuto.apply {
+        binding.autoEsgoto.apply {
             setAdapter(
                 ArrayAdapter(
                     activityContext,
                     R.layout.dropdown_id,
-                    items_id
+                    items_esgoto
                 )
             )
         }
 
-        binding.modAuto.apply {
+        binding.autoLixo.apply {
             setAdapter(
                 ArrayAdapter(
                     activityContext,
                     R.layout.dropdown_id,
-                    items_mod
+                    items_lixo
                 )
             )
         }
 
-        binding.refAuto.apply {
-            setAdapter(
-                ArrayAdapter(
-                    activityContext,
-                    R.layout.dropdown_id,
-                    items_ref
-                )
-            )
-        }
-
-        binding.unidadeBtn.setOnClickListener {
-            findNavController().navigate(R.id.action_MoradorTela_to_InfoMoradorTela)
+        binding.buttonDemaisInfoDomicilio.setOnClickListener {
+            findNavController().navigate(R.id.action_DemaisInfoDomicilioTela_to_MortalidadeTela)
         }
     }
 

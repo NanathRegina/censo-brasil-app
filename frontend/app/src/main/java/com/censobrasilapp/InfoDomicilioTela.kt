@@ -8,21 +8,21 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.navigation.fragment.findNavController
-import com.censobrasilapp.databinding.InfoMoradorTelaBinding
+import com.censobrasilapp.databinding.InfoDomicilioTelaBinding
 
-class InfoMoradorTela : Fragment() {
+class InfoDomicilioTela : Fragment() {
 
-    private var _binding: InfoMoradorTelaBinding? = null
+    private var _binding: InfoDomicilioTelaBinding? = null
     private lateinit var activityContext: Context
     private val binding get() = _binding!!
-    private val items_cor = listOf("Branca", "Preta", "Amarela", "Parda", "Indínena")
+    private val items_agua = listOf("Rede geral de distribuição", "Poço", "Carro-pipa", "Água da chuva armazenada")
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = InfoMoradorTelaBinding.inflate(inflater, container, false)
+        _binding = InfoDomicilioTelaBinding.inflate(inflater, container, false)
         return binding.root
 
     }
@@ -35,18 +35,18 @@ class InfoMoradorTela : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.indicator.setProgressCompat(40, true)
-        binding.autoCor.apply {
+        binding.indicator.setProgressCompat(80, true)
+        binding.autoAgua.apply {
             setAdapter(
                 ArrayAdapter(
                     activityContext,
                     R.layout.dropdown_id,
-                    items_cor
+                    items_agua
                 )
             )
         }
-        binding.buttonInfoMorador.setOnClickListener {
-            findNavController().navigate(R.id.action_InfoMoradorTela_to_MoradoresTela)
+        binding.buttonInfoDomicilio.setOnClickListener {
+            findNavController().navigate(R.id.action_InfoDomicilioTela_to_DemaisInfoDomicilioTela)
         }
     }
 

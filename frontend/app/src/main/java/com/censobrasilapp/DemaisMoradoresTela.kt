@@ -1,24 +1,27 @@
 package com.censobrasilapp
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import androidx.navigation.fragment.findNavController
-import com.censobrasilapp.databinding.PesquisaTelaBinding
+import com.censobrasilapp.databinding.DemaisMoradoresTelaBinding
 
-class PesquisaTela : Fragment() {
+class DemaisMoradoresTela : Fragment() {
 
-    private var _binding: PesquisaTelaBinding? = null
+    private var _binding: DemaisMoradoresTelaBinding? = null
     private val binding get() = _binding!!
+    private val items_cor = listOf("Branca", "Preta", "Amarela", "Parda", "Indínena")
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = PesquisaTelaBinding.inflate(inflater, container, false)
+        _binding = DemaisMoradoresTelaBinding.inflate(inflater, container, false)
         return binding.root
 
     }
@@ -26,12 +29,11 @@ class PesquisaTela : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.indicator.setProgressCompat(25, true)
+        binding.indicator.setProgressCompat(60, true)
 
-        binding.buttonPesquisa.setOnClickListener {
-            findNavController().navigate(R.id.action_PesquisaTela_to_MoradorTela)
+        binding.buttonDemaisMoradores.setOnClickListener {
+            findNavController().navigate(R.id.action_DemaisMoradoresTela_to_InfoDemaisMoradoresTela)
         }
-
     }
 
     override fun onDestroyView() {

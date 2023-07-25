@@ -6,11 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.censobrasilapp.databinding.MoradorTelaBinding
+import com.censobrasilapp.databinding.CensoTelaBinding
 
-class MoradorTela : Fragment() {
+class CensoTela : Fragment() {
 
-    private var _binding: MoradorTelaBinding? = null
+    private var _binding: CensoTelaBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -18,7 +18,7 @@ class MoradorTela : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = MoradorTelaBinding.inflate(inflater, container, false)
+        _binding = CensoTelaBinding.inflate(inflater, container, false)
         return binding.root
 
     }
@@ -26,11 +26,12 @@ class MoradorTela : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.indicator.setProgressCompat(30, true)
+        binding.indicator.setProgressCompat(15, true)
 
-        binding.buttonMorador.setOnClickListener {
-            findNavController().navigate(R.id.action_MoradorTela_to_InfoMoradorTela)
+        binding.buttonPesquisa.setOnClickListener {
+            findNavController().navigate(R.id.action_CensoTela_to_MoradorTela)
         }
+
     }
 
     override fun onDestroyView() {

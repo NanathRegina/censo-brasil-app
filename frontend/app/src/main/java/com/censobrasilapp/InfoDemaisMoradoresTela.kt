@@ -8,13 +8,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.navigation.fragment.findNavController
-import com.censobrasilapp.databinding.InfoMoradorTelaBinding
+import com.censobrasilapp.databinding.InfoDemaisMoradoresTelaBinding
 
-class InfoMoradorTela : Fragment() {
+class InfoDemaisMoradoresTela : Fragment() {
 
-    private var _binding: InfoMoradorTelaBinding? = null
+    private var _binding: InfoDemaisMoradoresTelaBinding? = null
     private lateinit var activityContext: Context
     private val binding get() = _binding!!
+    private val items_parentesco = listOf("Cônjuge ou companheiro(a)", "Filho(a) ou enteado(a)", "Pai, mãe, padrasto ou madrasta")
+    private val items_info_prestada = listOf("A própria pessoa", "Outro morador", "Não morador")
     private val items_cor = listOf("Branca", "Preta", "Amarela", "Parda", "Indínena")
 
     override fun onCreateView(
@@ -22,7 +24,7 @@ class InfoMoradorTela : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = InfoMoradorTelaBinding.inflate(inflater, container, false)
+        _binding = InfoDemaisMoradoresTelaBinding.inflate(inflater, container, false)
         return binding.root
 
     }
@@ -35,7 +37,7 @@ class InfoMoradorTela : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.indicator.setProgressCompat(40, true)
+        binding.indicator.setProgressCompat(70, true)
         binding.autoCor.apply {
             setAdapter(
                 ArrayAdapter(
@@ -45,8 +47,28 @@ class InfoMoradorTela : Fragment() {
                 )
             )
         }
-        binding.buttonInfoMorador.setOnClickListener {
-            findNavController().navigate(R.id.action_InfoMoradorTela_to_MoradoresTela)
+
+        binding.autoParentesco.apply {
+            setAdapter(
+                ArrayAdapter(
+                    activityContext,
+                    R.layout.dropdown_id,
+                    items_parentesco
+                )
+            )
+        }
+
+        binding.autoInfoPrestada.apply {
+            setAdapter(
+                ArrayAdapter(
+                    activityContext,
+                    R.layout.dropdown_id,
+                    items_info_prestada
+                )
+            )
+        }
+        binding.buttonInfoDemaisMoradores.setOnClickListener {
+            findNavController().navigate(R.id.action_InfoDemaisMoradoresTela_to_InfoDomicilioTela)
         }
     }
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.censobrasilapp.InfoMoradorTela">
+    tools:context="com.censobrasilapp.InfoDemaisMoradoresTela">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -81,55 +81,82 @@
         </RadioGroup>
 
         <TextView
-            android:id="@+id/text_recebimento"
+            android:id="@+id/text_parentesco"
             android:layout_below="@+id/radio_group_ler"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
-            android:text="@string/txt_recebimento" />
+            android:text="@string/txt_parentesco" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_parentesco"
+            android:layout_below="@+id/text_parentesco"
+            android:layout_width="350dp"
+            android:layout_height="64dp"
+            tools:ignore="MissingConstraints"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="30dp"
+            app:errorEnabled="true"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+            <AutoCompleteTextView
+                android:id="@+id/auto_parentesco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textAppearance="?attr/textAppearanceSubtitle1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
-            android:id="@+id/text_rendimentos"
-            android:layout_below="@+id/text_recebimento"
+            android:id="@+id/text_info_prestada"
+            android:layout_below="@+id/input_parentesco"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="15dp"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
-            android:text="@string/txt_rendimentos" />
+            android:text="@string/txt_info_prestada" />
 
-        <RadioGroup
-            android:id="@+id/radio_group_redimentos"
-            android:layout_below="@+id/text_rendimentos"
-            android:orientation="vertical"
-            android:checkedButton="@+id/radio_button_rendimentos"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp">
-            <RadioButton
-                android:id="@+id/radio_button_valor"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/radio_valor"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_info_prestada"
+            android:layout_below="@+id/text_info_prestada"
+            android:layout_width="350dp"
+            android:layout_height="64dp"
+            tools:ignore="MissingConstraints"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="30dp"
+            app:errorEnabled="true"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
 
-            <RadioButton
-                android:id="@+id/radio_button_moradia"
-                android:layout_width="wrap_content"
+            <AutoCompleteTextView
+                android:id="@+id/auto_info_prestada"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/radio_moradia"/>
+                android:inputType="none" />
 
-            <RadioButton
-                android:id="@+id/radio_button_outro"
-                android:layout_width="wrap_content"
+            <TextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/radio_outro"/>
-        </RadioGroup>
+                android:padding="16dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textAppearance="?attr/textAppearanceSubtitle1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/button_info_morador"
-            android:layout_below="@+id/radio_group_redimentos"
+            android:id="@+id/button_info_demais_moradores"
+            android:layout_below="@+id/input_info_prestada"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/btn_proximo_morador"

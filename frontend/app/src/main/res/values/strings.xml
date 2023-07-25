@@ -8,7 +8,13 @@
 
     <!-- Tela de faces -->
     <string name="faces_titulo">Faces</string>
-    <string name="btn_proximo_faces">Próximo</string>
+    <string name="btn_proximo_faces">Iniciar</string>
+    <string name="btn_adc_face">+</string>
+    <string name="popup_faces">Atenção</string>
+    <string name="popup_message_faces">Ao finalizar a criação da nova face, ela irá para aprovação do seu supervisor. 
+Deseja continuar para criação de nova face?</string>
+    <string name="btn_popup_sim">Sim</string>
+    <string name="btn_popup_nao">Não</string>
 
     <!--- Menu pesquisa-->
     <string name="pesquisa_titulo">Pesquisa</string>
@@ -48,11 +54,37 @@
     <string name="radio_moradia">Outra forma(moradia, alimentação, etc)</string>
     <string name="radio_outro">Não tem</string>
 
-    <!--- Tela de moradores-->
+    <!--- Tela de moradores -->
     <string name="moradores_titulo">Moradores</string>
     <string name="txt_responsavel">Responsável financeiro pelo domicílio</string>
     <string name="btn_adc_morador">+</string>
     <string name="btn_concluido_moradores">Concluído</string>
+
+    <!--- Tela de informações de moradores adicionais -->
+    <string name="txt_parentesco">Qual a relação de parentesco ou convivência com a pessoa responsável pelo domicílio?</string>
+    <string name="txt_info_prestada">Quem prestou as informações dessa pessoa?</string>
+
+    <!--- Tela de informações do domicílio-->
+    <string name="txt_agua">Qual a principal forma de abastecimento de água utilizada neste domicílio?</string>
+    <string name="txt_rede">Possui acesso à rede de distribuição de água?</string>
+    <string name="txt_agua_utilizada">A água utilizada chega:</string>
+    <string name="radio_fora">Encanada, mas apenas no terreno</string>
+    <string name="radio_dentro">Encanada até dentro da casa, apartamento ou habitação</string>
+    <string name="radio_nao_chega">Não chega encanada</string>
+    <string name="txt_banheiros">Não chega encanada</string>
+    <string name="hint_banheiros">Quantos banheiros de uso exclusivo existem neste domicílio?</string>
+    <string name="txt_banheiros_exclusivo">Quantos banheiros de uso exclusivo existem neste domicílio? </string>
+    <string name="txt_esgoto">Para onde vai o esgoto do banheiro?</string>
+    <string name="txt_lixo">O lixo deste domicílio é:</string>
+    <string name="btn_continuar_domicilio">Continuar</string>
+
+    <!-- Tela de informações adicionais do morador -->
+    <string name="txt_mortalidade">De janeiro de 2019 a julho de 2022, faleceu alguma pessoa que morava com você(s)?</string>
+    <string name="btn_finalizar_mortalidade">Finalizar</string>
+
+    <!-- Tela de informações adicionais do morador -->
+    <string name="popup_finalizar">Pesquisa concluída</string>
+    <string name="btn_popup_finalizar">OK</string>
 
     <!-- Tela adicionar face -->
     <string name="adc_face_titulo">Adicionar face</string>

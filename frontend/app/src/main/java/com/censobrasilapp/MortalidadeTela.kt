@@ -7,22 +7,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.censobrasilapp.databinding.FacesTelaBinding
+import com.censobrasilapp.databinding.MortalidadeTelaBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
-class FacesTela : Fragment() {
+class MortalidadeTela : Fragment() {
 
-    private var _binding: FacesTelaBinding? = null
-
-    private lateinit var activityContext: Context
+    private var _binding: MortalidadeTelaBinding? = null
     private val binding get() = _binding!!
+    private lateinit var activityContext: Context
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = FacesTelaBinding.inflate(inflater, container, false)
+        _binding = MortalidadeTelaBinding.inflate(inflater, container, false)
         return binding.root
 
     }
@@ -35,13 +34,10 @@ class FacesTela : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonAdcFace.setOnClickListener {
-            popUp()
-        }
+        binding.indicator.setProgressCompat(100, true)
 
-        binding.buttonFaces.setOnClickListener {
-            findNavController().navigate(R.id.action_FacesTela_to_MenuPesquisa)
-        }
+        binding.buttonInfoMortalidade.setOnClickListener {
+            popUp()}
     }
 
     override fun onDestroyView() {
@@ -51,16 +47,12 @@ class FacesTela : Fragment() {
 
     fun popUp() {
         MaterialAlertDialogBuilder(activityContext)
-            .setTitle(resources.getString(R.string.popup_faces))
-            .setMessage(resources.getString(R.string.popup_message_faces))
-            .setPositiveButton(resources.getString(R.string.btn_popup_sim)) { dialog, which ->
-                findNavController().navigate(R.id.action_FacesTela_to_FaceTela)
-            }
-            .setNegativeButton(resources.getString(R.string.btn_popup_nao)) { dialog, which ->
+            .setMessage(resources.getString(R.string.popup_finalizar))
+            .setPositiveButton(resources.getString(R.string.btn_popup_finalizar)) { dialog, which ->
+
+                findNavController().navigate(R.id.action_MortalidadeTela_to_FacesTela)
 
             }
             .show()
     }
-
-
 }

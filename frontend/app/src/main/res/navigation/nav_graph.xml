@@ -22,6 +22,9 @@
         tools:layout="@layout/faces_tela">
 
         <action
+            android:id="@+id/action_FacesTela_to_FaceTela"
+            app:destination="@id/FaceTela" />
+        <action
             android:id="@+id/action_FacesTela_to_MenuPesquisa"
             app:destination="@id/MenuPesquisa" />
     </fragment>
@@ -45,17 +48,17 @@
 
         <action
             android:id="@+id/action_FaceTela_to_PesquisaTela"
-            app:destination="@id/PesquisaTela" />
+            app:destination="@id/CensoTela" />
     </fragment>
 
     <fragment
-        android:id="@+id/PesquisaTela"
-        android:name="com.censobrasilapp.PesquisaTela"
+        android:id="@+id/CensoTela"
+        android:name="com.censobrasilapp.CensoTela"
         android:label="@string/pesquisa_titulo"
-        tools:layout="@layout/pesquisa_tela">
+        tools:layout="@layout/censo_tela">
 
         <action
-            android:id="@+id/action_PesquisaTela_to_MoradorTela"
+            android:id="@+id/action_CensoTela_to_MoradorTela"
             app:destination="@id/MoradorTela" />
     </fragment>
 
@@ -88,8 +91,67 @@
         tools:layout="@layout/moradores_tela">
 
         <action
-            android:id="@+id/action_MoradorTela_to_InfoMoradorTela"
-            app:destination="@id/MoradorTela" />
+            android:id="@+id/action_MoradoresTela_to_DemaisMoradoresTela"
+            app:destination="@id/DemaisMoradoresTela" />
+
+        <action
+            android:id="@+id/action_MoradoresTela_to_InfoDomicilioTela"
+            app:destination="@id/InfoDomicilioTela" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/DemaisMoradoresTela"
+        android:name="com.censobrasilapp.DemaisMoradoresTela"
+        android:label="@string/pesquisa_titulo"
+        tools:layout="@layout/demais_moradores_tela">
+
+        <action
+            android:id="@+id/action_DemaisMoradoresTela_to_InfoDemaisMoradoresTela"
+            app:destination="@id/InfoDemaisMoradoresTela" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/InfoDemaisMoradoresTela"
+        android:name="com.censobrasilapp.InfoDemaisMoradoresTela"
+        android:label="@string/pesquisa_titulo"
+        tools:layout="@layout/info_demais_moradores_tela">
+
+        <action
+            android:id="@+id/action_InfoDemaisMoradoresTela_to_InfoDomicilioTela"
+            app:destination="@id/InfoDomicilioTela" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/InfoDomicilioTela"
+        android:name="com.censobrasilapp.InfoDomicilioTela"
+        android:label="@string/pesquisa_titulo"
+        tools:layout="@layout/info_domicilio_tela">
+
+        <action
+            android:id="@+id/action_InfoDomicilioTela_to_DemaisInfoDomicilioTela"
+            app:destination="@id/DemaisInfoDomicilioTela" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/DemaisInfoDomicilioTela"
+        android:name="com.censobrasilapp.DemaisInfoDomicilioTela"
+        android:label="@string/pesquisa_titulo"
+        tools:layout="@layout/demais_info_domicilio_tela">
+
+        <action
+            android:id="@+id/action_DemaisInfoDomicilioTela_to_MortalidadeTela"
+            app:destination="@id/MortalidadeTela" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/MortalidadeTela"
+        android:name="com.censobrasilapp.MortalidadeTela"
+        android:label="@string/pesquisa_titulo"
+        tools:layout="@layout/mortalidade_tela">
+
+        <action
+            android:id="@+id/action_MortalidadeTela_to_FacesTela"
+            app:destination="@id/FacesTela" />
     </fragment>
 
     <fragment
@@ -108,5 +170,9 @@
         android:name="com.censobrasilapp.UnidadeTela"
         android:label="@string/adc_unidade_label"
         tools:layout="@layout/unidade_tela">
+
+        <action
+            android:id="@+id/action_UnidadeTela_to_UnidadeTela"
+            app:destination="@id/UnidadeTela" />
     </fragment>
 </navigation>
