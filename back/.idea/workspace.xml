@@ -23,39 +23,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="187cc6e0-9de9-4ec0-8c65-a696d9918e05" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/censo-brasil-app.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/KotlinApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/KotlinApplication.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/controller/PesquisaController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/controller/PesquisaController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/dto/Pesquisa.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/dto/Pesquisa.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/repository/PesquisaRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/repository/PesquisaRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/service/PesquisaService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/service/PesquisaService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/controller/PesquisaController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/controller/PesquisaController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/dto/Pesquisa.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/dto/Pesquisa.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/repository/PesquisaRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/repository/PesquisaRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/service/PesquisaService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/service/PesquisaService.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/back-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/back-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/back-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/back-1.0-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/back.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/back.kotlin_module" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/KotlinApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/KotlinApplicationKt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/controller/PesquisaController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dto/Pesquisa.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/repository/PesquisaRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/service/PesquisaService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/backend.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/kotlin/dto/Pesquisa.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/kotlin/enum/TipoAbastecimento.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/kotlin/enum/TipoPesquisa.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,8 +40,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin Class" />
         <option value="Kotlin Interface" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -106,9 +81,11 @@
       <recent name="com" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
-      <recent name="service" />
-      <recent name="controller" />
-      <recent name="dto" />
+      <recent name="br.com.repository" />
+      <recent name="br.com.service" />
+      <recent name="br.com.controller" />
+      <recent name="br.com.enum" />
+      <recent name="br.com.dto" />
     </key>
   </component>
   <component name="RunManager">

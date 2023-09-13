@@ -1,8 +1,12 @@
 package br.com.controller
 
+import br.com.dto.Pesquisa
 import br.com.service.PesquisaService
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
+import java.util.*
+import javax.validation.Valid
 
 @RestController
 @RequestMapping("/api/v1/pesquisas")
@@ -12,14 +16,18 @@ class PesquisaController(
     private val pesquisaService: PesquisaService
 ) {
 
-//
-//    @GetMapping("/teste1")
-//    fun pesquisas(): Long {
-//        return pesquisaService.listarPesquisas()
-//    }
+    @GetMapping("/")
+    fun listaPesquisas(): ResponseEntity<List<Pesquisa>> {
+        return ResponseEntity.ok<List<Pesquisa>>(pesquisaService.listaPesquisas())
+    }
 
-    @GetMapping("/teste")
-    fun teste(): Long{
-        return pesquisaService.listarPesquisas()
+    @GetMapping("/{idPesquisa}")
+    fun listaPesquisa(@PathVariable idPesquisa: Long): ResponseEntity<Pesquisa> {
+        return ResponseEntity.ok<Pesquisa>(pesquisaService.listaPesquisa(idPesquisa))
+    }
+
+    @PostMapping("/pesquisa")
+    fun salvarPesquisa(@RequestBody @Valid pesquisa: Pesquisa): Pesquisa {
+        return pesquisaService.salvaPesquisa(pesquisa)
     }
 }

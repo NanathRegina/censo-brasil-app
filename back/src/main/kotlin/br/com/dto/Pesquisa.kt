@@ -1,41 +1,57 @@
 package br.com.dto
 
+import br.com.enum.Abastecimento
+import br.com.enum.TipoPesquisa
 import org.jetbrains.annotations.NotNull
 import java.util.*
 import javax.persistence.*
+import javax.validation.Valid
+import javax.validation.constraints.NotBlank
+import javax.validation.constraints.NotEmpty
 
 @Entity
 @Table(name = "pesquisa")
-class Pesquisa {
-
+class Pesquisa (
     @Id
-    @GeneratedValue
-    private val id: Long? = null
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    val id: Long = 0L,
 
-    @NotNull
-    private val qtdMoradores: String? = null
 
-    @NotNull
-    private val qtdCriancas: String? = null
+    val tipoPesquisa: TipoPesquisa,
 
-    @NotNull
-    private val acessoDistribuicao: Boolean? = null
+    @field:NotBlank
+    val qtdMoradores: String = "",
 
-    @NotNull
-    private val aguaEncanada: String? = null
+    @field:NotBlank
+    val qtdCriancas: String = "",
 
-    @NotNull
-    private val qdtBanheiro: String? = null
+    @OneToMany(mappedBy = "id")
+    val moradores: List<Morador>,
 
-    @NotNull
-    private val esgoto: String? = null
 
-    @NotNull
-    private val lixo: String? = null
+    val tipoAbastecimento: Abastecimento,
 
-    @NotNull
-    private val falecimento: Boolean? = null
 
-    @NotNull
-    private val dataPesquisa: Date? = null
+    val acessoDistribuicao: Boolean = false,
+
+    @field:NotBlank
+    val aguaEncanada: String = "",
+
+    @field:NotBlank
+    val qtdBanheiro: String = "",
+
+    @field:NotBlank
+    val esgoto: String = "",
+
+    @field:NotBlank
+    val lixo: String = "",
+
+
+    val falecimento: Boolean = false,
+
+
+    val dataPesquisa: Date = Date(),
+    ){
+
+
 }
