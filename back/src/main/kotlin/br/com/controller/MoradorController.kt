@@ -14,6 +14,7 @@ import javax.validation.Valid
 @RequestMapping("/api/v1/moradores")
 class MoradorController(
 
+    //TODO: validacção de contrato não está funcionando
     @Autowired
     private val moradorService: MoradorService
 ) {
@@ -21,5 +22,10 @@ class MoradorController(
     @GetMapping("/")
     fun listaMoradores(): ResponseEntity<List<Morador>> {
         return ResponseEntity.ok<List<Morador>>(moradorService.listaMoradores())
+    }
+
+    @GetMapping("/{idMorador}")
+    fun listaMorador(@PathVariable idMorador: Long): ResponseEntity<Morador> {
+        return ResponseEntity.ok<Morador>(moradorService.listaMorador(idMorador))
     }
 }

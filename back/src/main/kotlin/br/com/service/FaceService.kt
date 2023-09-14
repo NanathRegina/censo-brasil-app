@@ -1,7 +1,8 @@
 package br.com.service
 
-import br.com.dto.Morador
+import br.com.dto.Face
 import br.com.dto.Pesquisa
+import br.com.repository.FaceRepository
 import br.com.repository.MoradorRepository
 import br.com.repository.PesquisaRepository
 import org.springframework.data.crossstore.ChangeSetPersister.NotFoundException
@@ -13,19 +14,20 @@ import java.util.*
 import javax.persistence.EntityNotFoundException
 
 @Service
-class MoradorService (
-    private val repository: MoradorRepository
+class FaceService (
+    private val repository: FaceRepository
 ){
 
-    fun listaMorador(idMorador: Long): Morador {
-        //TODO: tratar exception de morador n encontrado
+    fun listaFace(idFace: Long): Face {
+        //TODO: tratar exception de face n encontrada
         try {
-            return repository.findById(idMorador).get()
+            return repository.findById(idFace).get()
         }catch (ex: Exception){
             throw ex
         }
     }
-    fun listaMoradores(): List<Morador> {
+
+    fun listaFaces(): List<Face> {
         try {
             return repository.findAll().toList()
         }catch (ex: Exception){
@@ -33,22 +35,13 @@ class MoradorService (
         }
     }
 
-    fun salvaMoradores(moradores: List<Morador>): List<Morador> {
+    //TODO: caso de uso
+    fun criaFace(face: Face): Face {
         try {
-            return repository.saveAll(moradores).toList()
+            return repository.save(face)
         }catch (ex: Exception){
             throw ex
         }
     }
-
-    fun apagaMorador(idMorador: Long){
-        try {
-            return repository.deleteById(idMorador)
-        }catch (ex: Exception){
-            throw ex
-        }
-    }
-
-
 
 }

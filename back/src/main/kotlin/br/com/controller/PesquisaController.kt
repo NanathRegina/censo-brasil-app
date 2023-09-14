@@ -12,6 +12,7 @@ import javax.validation.Valid
 @RequestMapping("/api/v1/pesquisas")
 class PesquisaController(
 
+    //TODO: validacção de contrato não está funcionando
     @Autowired
     private val pesquisaService: PesquisaService
 ) {
@@ -29,5 +30,10 @@ class PesquisaController(
     @PostMapping("/pesquisa")
     fun salvarPesquisa(@RequestBody @Valid pesquisa: Pesquisa): Pesquisa {
         return pesquisaService.salvaPesquisa(pesquisa)
+    }
+
+    @DeleteMapping("/{idPesquisa}")
+    fun apagarPesquisa(@PathVariable idPesquisa: Long) {
+        return pesquisaService.apagaPesquisa(idPesquisa)
     }
 }

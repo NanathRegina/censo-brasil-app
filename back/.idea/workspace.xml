@@ -25,9 +25,9 @@
     <list default="true" id="187cc6e0-9de9-4ec0-8c65-a696d9918e05" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/controller/MoradorController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/controller/MoradorController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/controller/PesquisaController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/controller/PesquisaController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/dto/Pesquisa.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/dto/Pesquisa.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/repository/PesquisaRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/repository/PesquisaRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/service/MoradorService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/service/MoradorService.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/service/PesquisaService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/service/PesquisaService.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
@@ -81,17 +81,18 @@
       <recent name="com" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
-      <recent name="br.com.repository" />
-      <recent name="br.com.service" />
-      <recent name="br.com.controller" />
       <recent name="br.com.enum" />
       <recent name="br.com.dto" />
+      <recent name="br.com.controller" />
+      <recent name="br.com.repository" />
+      <recent name="br.com.service" />
     </key>
   </component>
   <component name="RunManager">
     <configuration name="KotlinApplicationKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.com.KotlinApplicationKt" />
       <module name="back" />
+      <option name="PROGRAM_PARAMETERS" value="-Dspring.profiles.active=local" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />

@@ -14,34 +14,45 @@ import javax.persistence.EntityNotFoundException
 @Service
 class PesquisaService (
     private val repository: PesquisaRepository,
-    private val repositoryMorador: MoradorRepository
+    private val repositoryMorador: MoradorRepository,
+    private val serviceMorador: MoradorService
 ){
 
     fun listaPesquisa(idPesquisa: Long): Pesquisa {
-        var pesquisa: Pesquisa
+        //TODO: tratar exception de pesquisa n encontrada
             try {
-                pesquisa = repository.findById(idPesquisa).get()
+                return repository.findById(idPesquisa).get()
             }catch (ex: Exception){
                 throw ex
             }
-                return pesquisa
     }
 
     fun listaPesquisas(): List<Pesquisa> {
-        var pesquisa: List<Pesquisa>
         try {
-            pesquisa = repository.findAll().toList()
+            return repository.findAll().toList()
         }catch (ex: Exception){
             throw ex
         }
-        return pesquisa
     }
 
+    //TODO: caso de uso
     fun salvaPesquisa(pesquisa: Pesquisa): Pesquisa {
         try {
-            //TODO: chamar a service aqui, ao invés da repository
-            repositoryMorador.saveAll(pesquisa.moradores)
+            serviceMorador.salvaMoradores(pesquisa.moradores)
             return repository.save(pesquisa)
+        }catch (ex: Exception){
+            throw ex
+        }
+    }
+
+    //TODO: caso de uso
+    fun apagaPesquisa(idPesquisa: Long) {
+        try {
+            listaPesquisa(idPesquisa).moradores.forEach {
+                morador -> serviceMorador.apagaMorador(morador.id)
+            }
+
+            return repository.deleteById(idPesquisa)
         }catch (ex: Exception){
             throw ex
         }

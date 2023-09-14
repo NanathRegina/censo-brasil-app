@@ -100,7 +100,6 @@
                 <configuration>
                     <args>
                         <arg>-Xjsr305=strict</arg>
-                        <arg>-Xjsr305-annotations=enable</arg>
                     </args>
                     <jvmTarget>1.8</jvmTarget>
                     <compilerPlugins>
