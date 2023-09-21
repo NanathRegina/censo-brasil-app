@@ -1,12 +1,8 @@
 package br.com.dto
 
 import br.com.enum.*
-import org.jetbrains.annotations.NotNull
-import java.util.*
 import javax.persistence.*
-import javax.validation.Valid
 import javax.validation.constraints.NotBlank
-import javax.validation.constraints.NotEmpty
 
 @Entity
 @Table(name = "unidade")

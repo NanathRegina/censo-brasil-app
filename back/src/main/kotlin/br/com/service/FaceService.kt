@@ -4,7 +4,7 @@ import br.com.dto.Face
 import br.com.dto.Pesquisa
 import br.com.repository.FaceRepository
 import br.com.repository.MoradorRepository
-import br.com.repository.PesquisaRepository
+//import br.com.repository.PesquisaRepository
 import org.springframework.data.crossstore.ChangeSetPersister.NotFoundException
 import org.springframework.http.HttpStatus
 import org.springframework.stereotype.Service

@@ -1,52 +1,53 @@
 package br.com.dto
 
 import br.com.enum.*
-import org.jetbrains.annotations.NotNull
 import java.util.*
 import javax.persistence.*
 
 @Entity
 @Table(name = "morador")
 class Morador(
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long = 0L,
 
-    @NotNull
+
+    //@NotNull
     val nome: String = "",
 
-    @NotNull
+    //@NotNull
     val sobrenome: String = "",
 
-    @NotNull
+    //@NotNull
     val sexo: String = "",
 
-    @NotNull
+    //@NotNull
     val dataNascimento: Date = Date(),
 
-    @NotNull
+    //@NotNull
     val idadeAnos: String = "",
 
-    @NotNull
+    //@NotNull
     val idadeMeses: String = "",
 
-    @NotNull
+    //@NotNull
     val cor: Cor,
 
-    @NotNull
+    //@NotNull
     val leitura: Boolean = false,
 
-    @NotNull
+    //@NotNull
     val formaRenda: Renda,
 
-    @NotNull
+    //@NotNull
     val valor: Double = 0.0,
 
-    @NotNull
+    //@NotNull
     val faixaRendimento: Rendimento,
 
-    @NotNull
+    //@NotNull
     val respondente: String = "",
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    val idMorador: Long = 0L
     ){
 
 
