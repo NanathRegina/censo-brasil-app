@@ -24,22 +24,43 @@
   <component name="ChangeListManager">
     <list default="true" id="187cc6e0-9de9-4ec0-8c65-a696d9918e05" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/controller/FacesController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/controller/FacesController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/controller/MoradorController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/controller/MoradorController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/controller/PesquisaController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/controller/PesquisaController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/dto/Morador.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/dto/Morador.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/dto/Pesquisa.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/dto/Pesquisa.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/dto/Unidade.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/dto/Unidade.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/service/FaceService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/service/FaceService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/service/MoradorService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/service/MoradorService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/service/PesquisaService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/service/PesquisaService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/controller/MoradorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/controller/MoradorController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/controller/PesquisaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/controller/PesquisaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/service/MoradorService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/service/MoradorService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/service/PesquisaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/service/PesquisaService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/CensoTela.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/CensoTela.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/DemaisInfoDomicilioTela.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/DemaisInfoDomicilioTela.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/DemaisMoradoresTela.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/DemaisMoradoresTela.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/EtapasTela.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/EtapasTela.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/FaceTela.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/FaceTela.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/FacesTela.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/FacesTela.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/InfoDemaisMoradoresTela.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/InfoDemaisMoradoresTela.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/InfoDomicilioTela.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/InfoDomicilioTela.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/InfoMoradorTela.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/InfoMoradorTela.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/InicioTela.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/InicioTela.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/MenuPesquisa.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/MenuPesquisa.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/MoradorTela.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/MoradorTela.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/MoradoresTela.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/MoradoresTela.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/MortalidadeTela.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/MortalidadeTela.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/UnidadeTela.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/UnidadeTela.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/res/layout/censo_tela.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/res/layout/censo_tela.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/res/layout/demais_info_domicilio_tela.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/res/layout/demais_info_domicilio_tela.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/res/layout/demais_moradores_tela.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/res/layout/demais_moradores_tela.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/res/layout/etapas_tela.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/res/layout/etapas_tela.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/res/layout/face_tela.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/res/layout/face_tela.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/res/layout/faces_tela.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/res/layout/faces_tela.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/res/layout/info_demais_moradores_tela.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/res/layout/info_demais_moradores_tela.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/res/layout/info_domicilio_tela.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/res/layout/info_domicilio_tela.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/res/layout/info_morador_tela.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/res/layout/info_morador_tela.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/res/layout/inicio.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/res/layout/inicio.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/res/layout/menu_pesquisa.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/res/layout/menu_pesquisa.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/res/layout/morador_tela.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/res/layout/morador_tela.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/res/layout/moradores_tela.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/res/layout/moradores_tela.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/res/layout/mortalidade_tela.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/res/layout/mortalidade_tela.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/res/layout/unidade_tela.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/res/layout/unidade_tela.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/res/menu/menu_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/res/menu/menu_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/res/navigation/nav_graph.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/res/navigation/nav_graph.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

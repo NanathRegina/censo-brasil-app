@@ -1,4 +1,4 @@
-package com.censobrasilapp
+package com.censobrasilapp.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,11 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.censobrasilapp.databinding.EtapasTelaBinding
+import com.censobrasilapp.R
+import com.censobrasilapp.databinding.MoradorTelaBinding
 
-class EtapasTela : Fragment() {
+class MoradorTela : Fragment() {
 
-    private var _binding: EtapasTelaBinding? = null
+    private var _binding: MoradorTelaBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -18,7 +19,7 @@ class EtapasTela : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = EtapasTelaBinding.inflate(inflater, container, false)
+        _binding = MoradorTelaBinding.inflate(inflater, container, false)
         return binding.root
 
     }
@@ -26,10 +27,11 @@ class EtapasTela : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonEtapas.setOnClickListener {
-            findNavController().navigate(R.id.action_FaceTela_to_PesquisaTela)
-        }
+        binding.indicator.setProgressCompat(30, true)
 
+        binding.buttonMorador.setOnClickListener {
+            findNavController().navigate(R.id.action_MoradorTela_to_InfoMoradorTela)
+        }
     }
 
     override fun onDestroyView() {

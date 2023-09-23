@@ -1,4 +1,4 @@
-package com.censobrasilapp
+package com.censobrasilapp.view
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -8,7 +8,7 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.ArrayAdapter
+import com.censobrasilapp.R
 import com.censobrasilapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

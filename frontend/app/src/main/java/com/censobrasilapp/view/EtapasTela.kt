@@ -1,27 +1,25 @@
-package com.censobrasilapp
+package com.censobrasilapp.view
 
-import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
 import androidx.navigation.fragment.findNavController
-import com.censobrasilapp.databinding.DemaisMoradoresTelaBinding
+import com.censobrasilapp.R
+import com.censobrasilapp.databinding.EtapasTelaBinding
 
-class DemaisMoradoresTela : Fragment() {
+class EtapasTela : Fragment() {
 
-    private var _binding: DemaisMoradoresTelaBinding? = null
+    private var _binding: EtapasTelaBinding? = null
     private val binding get() = _binding!!
-    private val items_cor = listOf("Branca", "Preta", "Amarela", "Parda", "Indínena")
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = DemaisMoradoresTelaBinding.inflate(inflater, container, false)
+        _binding = EtapasTelaBinding.inflate(inflater, container, false)
         return binding.root
 
     }
@@ -29,11 +27,10 @@ class DemaisMoradoresTela : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.indicator.setProgressCompat(60, true)
-
-        binding.buttonDemaisMoradores.setOnClickListener {
-            findNavController().navigate(R.id.action_DemaisMoradoresTela_to_InfoDemaisMoradoresTela)
+        binding.buttonEtapas.setOnClickListener {
+            findNavController().navigate(R.id.action_FaceTela_to_PesquisaTela)
         }
+
     }
 
     override fun onDestroyView() {
