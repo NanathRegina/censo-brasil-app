@@ -7,6 +7,7 @@
     tools:context="com.censobrasilapp.view.MenuPesquisa">
 
     <RelativeLayout
+        android:id="@+id/menu_pesquisa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">

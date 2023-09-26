@@ -13,9 +13,16 @@ import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.censobrasilapp.R
+import com.censobrasilapp.api.Endpoints
 import com.censobrasilapp.databinding.FaceTelaBinding
+import com.censobrasilapp.model.Morador
+import com.censobrasilapp.model.Pesquisa
+import com.censobrasilapp.utils.NetworkUtils
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import java.util.Random
 
 
@@ -60,6 +67,7 @@ class FaceTela : Fragment() {
 
             override fun afterTextChanged(s: Editable) {
                 validaCampos(view)
+
                 Log.i("after", s.toString())
             }
             })
@@ -97,7 +105,7 @@ class FaceTela : Fragment() {
         }
 
         binding.proximoFaceBtn.setOnClickListener {
-                findNavController().navigate(R.id.action_FaceTela_to_UnidadeTela)}
+            findNavController().navigate(R.id.action_FaceTela_to_UnidadeTela)}
     }
 
     private fun validaCampos(view: View): Boolean {
@@ -124,4 +132,6 @@ class FaceTela : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
+
 }

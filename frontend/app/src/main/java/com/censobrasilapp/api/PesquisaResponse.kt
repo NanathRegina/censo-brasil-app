@@ -9,19 +9,22 @@ import java.util.Date
 @Serializable
 data class PesquisaResponse(
     //val tipoPesquisa: TipoPesquisa,
+    val tipoPesquisa: String,
     val qtdMoradores: String,
     val qtdCriancas: String,
     //val moradores: List<Morador>,
     //val tipoAbastecimento: Abastecimento,
+    @Contextual
+    val moradores: List<Morador>,
+    val tipoAbastecimento: String,
     val acessoDistribuicao: Boolean,
     val aguaEncanada: String,
     val qtdBanheiro: String,
     val esgoto: String,
     val lixo: String,
     val falecimento: Boolean,
-    @Contextual
-    val dataPesquisa: Date,
-    val idPesquisa: Long
+    val dataPesquisa: String,
+    val idPesquisa: Long?
 )
 
 fun PesquisaResponse.toPesquisa() = Pesquisa(
@@ -34,7 +37,9 @@ fun PesquisaResponse.toPesquisa() = Pesquisa(
     qtdMoradores = qtdMoradores,
     acessoDistribuicao = acessoDistribuicao,
     aguaEncanada = aguaEncanada,
-    dataPesquisa = Date(),
-    moradores = listOf()
+    dataPesquisa = dataPesquisa,
+    moradores = listOf(),
+    tipoAbastecimento = tipoAbastecimento,
+    tipoPesquisa = tipoPesquisa
 
 )

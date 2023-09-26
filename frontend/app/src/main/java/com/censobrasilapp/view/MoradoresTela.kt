@@ -1,13 +1,21 @@
 package com.censobrasilapp.view
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.censobrasilapp.R
+import com.censobrasilapp.api.Endpoints
 import com.censobrasilapp.databinding.MoradoresTelaBinding
+import com.censobrasilapp.model.Morador
+import com.censobrasilapp.model.Pesquisa
+import com.censobrasilapp.utils.NetworkUtils
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class MoradoresTela : Fragment() {
 
@@ -28,6 +36,7 @@ class MoradoresTela : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.indicator.setProgressCompat(50, true)
+
         binding.buttonAdcMorador.setOnClickListener {
             findNavController().navigate(R.id.action_MoradoresTela_to_DemaisMoradoresTela)
         }
@@ -42,4 +51,6 @@ class MoradoresTela : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
+
 }
