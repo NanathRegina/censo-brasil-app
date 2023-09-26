@@ -49,6 +49,9 @@
         <action
             android:id="@+id/action_FaceTela_to_PesquisaTela"
             app:destination="@id/CensoTela" />
+        <argument
+            android:name="tipoPesquisa"
+            app:argType="string" />
     </fragment>
 
     <fragment

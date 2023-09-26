@@ -33,7 +33,7 @@ class MenuPesquisa : Fragment() {
         binding.buttonPresencial.setOnClickListener {
             Log.i("entrando", "aqui")
 
-
+/*
             val bundle = Bundle()
             bundle.putString("tipoPesquisa", "PRESENCIAL")
 
@@ -43,9 +43,10 @@ class MenuPesquisa : Fragment() {
             fragmentManager?.beginTransaction()?.replace(R.id.menu_pesquisa, censoTela)?.commit()
 
 
-            Log.i("argumentos", censoTela.arguments.toString())
+            Log.i("argumentos", censoTela.arguments.toString())*/
             Log.i("indo", "indo pra lá")
-            findNavController().navigate(R.id.action_MenuPesquisa_to_EtapasTela)
+            // passar o argumento que foi definido no action no nav_graph.xml, a classe MenuPesquisaDirections e suas funções são geradas automaticamente com os parametros criados lá
+            findNavController().navigate(MenuPesquisaDirections.actionMenuPesquisaToEtapasTela("PRESENCIAL"))
         }
     }
 
