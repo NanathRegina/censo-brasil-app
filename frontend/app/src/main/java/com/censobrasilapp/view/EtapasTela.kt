@@ -33,7 +33,8 @@ class EtapasTela : Fragment() {
         //argumentos recebidos da tela MenuPesquisa
         Log.d("argumentos recebidos", args.tipoPesquisa)
         binding.buttonEtapas.setOnClickListener {
-            findNavController().navigate(R.id.action_FaceTela_to_PesquisaTela)
+            //usar a função de navegação gerada pelo Directions (ao acrescentar novos parametros no navigation também serão acrescentados na função)
+            findNavController().navigate(EtapasTelaDirections.actionFaceTelaToPesquisaTela())
         }
 
     }
