@@ -5,11 +5,13 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.censobrasilapp.R
 import com.censobrasilapp.databinding.MenuPesquisaBinding
+import com.censobrasilapp.model.Pesquisa
+import org.json.JSONArray
+import org.json.JSONObject
+import java.util.Objects
 
 
 class MenuPesquisa : Fragment() {
@@ -30,22 +32,13 @@ class MenuPesquisa : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        var pesquisa = Pesquisa()
+            pesquisa.tipoPesquisa = "PRESENCIAL"
+
+        //tipoPesquisa.put("tipoPesquisa","PRESENCIAL")
+
         binding.buttonPresencial.setOnClickListener {
-            Log.i("entrando", "aqui")
-
-
-            val bundle = Bundle()
-            bundle.putString("tipoPesquisa", "PRESENCIAL")
-
-            val censoTela= CensoTela()
-            censoTela.arguments = bundle
-
-            fragmentManager?.beginTransaction()?.replace(R.id.menu_pesquisa, censoTela)?.commit()
-
-
-            Log.i("argumentos", censoTela.arguments.toString())
-            Log.i("indo", "indo pra lá")
-            findNavController().navigate(R.id.action_MenuPesquisa_to_EtapasTela)
+            findNavController().navigate(MenuPesquisaDirections.actionMenuPesquisaToEtapasTela(pesquisa))
         }
     }
 

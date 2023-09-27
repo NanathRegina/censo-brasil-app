@@ -6,20 +6,20 @@ import java.util.Date
 
 @Serializable
 data class Morador(
-    val nome: String,
-    val sobrenome: String,
-    val sexo: String,
+    var nome: String = "",
+    var sobrenome: String = "",
+    var sexo: String = "",
     @Contextual
-    val dataNascimento: String,
-    val idadeAnos: String,
-    val idadeMeses: String,
+    var dataNascimento: String = "",
+    val idadeAnos: String = "",
+    val idadeMeses: String = "",
     // val cor: Cor,
     //val formaRenda: Renda,
-    val cor: String,
-    val formaRenda: String,
-    val valor: Double,
+    val cor: String = "",
+    val formaRenda: String = "",
+    val valor: Double = 0.0,
     //val faixaRendimento: Rendimento,
-    val faixaRendimento: String,
-    val respondente: String,
-    val idMorador: Long?
+    val faixaRendimento: String = "",
+    val respondente: String = "",
+    val idMorador: Long? = 0L
 )

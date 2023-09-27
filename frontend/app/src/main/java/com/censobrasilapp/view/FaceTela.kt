@@ -15,9 +15,6 @@ import androidx.navigation.fragment.findNavController
 import com.censobrasilapp.R
 import com.censobrasilapp.api.Endpoints
 import com.censobrasilapp.databinding.FaceTelaBinding
-import com.censobrasilapp.model.Morador
-import com.censobrasilapp.model.Pesquisa
-import com.censobrasilapp.utils.NetworkUtils
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import retrofit2.Call
