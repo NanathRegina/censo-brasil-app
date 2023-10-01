@@ -1,7 +1,7 @@
 package br.com.enum
 
 enum class TipoModificador(
-    val tipo: String
+    val tipo: String?
 ) {
     SN("SN"),
     FNS("FNS"),
