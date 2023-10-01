@@ -3,47 +3,53 @@ package br.com.dto
 import br.com.enum.*
 import java.util.*
 import javax.persistence.*
+import javax.validation.constraints.NotNull
 
 @Entity
 @Table(name = "morador")
 class Morador(
 
 
-    //@NotNull
+    @NotNull
     val nome: String = "",
 
-    //@NotNull
+    @NotNull
     val sobrenome: String = "",
 
-    //@NotNull
+    @NotNull
     val sexo: String = "",
 
     //@NotNull
-    val dataNascimento: Date = Date(),
+    //TODO: pode ser nulo
+    val dataNascimento: Date? = Date(),
 
     //@NotNull
-    val idadeAnos: String = "",
+    //TODO: pode ser nulo
+    val idadeAnos: String? = "",
 
     //@NotNull
-    val idadeMeses: String = "",
+    val idadeMeses: String? = "",
 
-    //@NotNull
+    @NotNull
     val cor: Cor,
 
-    //@NotNull
+    @NotNull
     val leitura: Boolean = false,
 
-    //@NotNull
+    @NotNull
     val formaRenda: Renda,
 
     //@NotNull
-    val valor: Double = 0.0,
+    //TODO: pode ser nulo
+    val valor: Double? = 0.0,
 
     //@NotNull
-    val faixaRendimento: Rendimento,
+    //TODO: pode ser nulo
+    val faixaRendimento: Rendimento?,
 
     //@NotNull
-    val respondente: String = "",
+    //TODO: pode ser nulo
+    val respondente: String? = "",
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

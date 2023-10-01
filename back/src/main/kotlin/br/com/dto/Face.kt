@@ -27,13 +27,16 @@ class Face(
     @NotNull
     val nar: Boolean = false,
 
+    @NotNull
     val dataInclusao: Date = Date(),
 
+    @NotNull
     val status: StatusFace,
 
     @NotNull
     val qtdUnidades: String = "",
 
+    @NotNull
     @OneToMany(mappedBy = "id")
     val unidades: List<Unidade>,
     ){

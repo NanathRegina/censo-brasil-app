@@ -4,41 +4,48 @@ import br.com.enum.Abastecimento
 import br.com.enum.TipoPesquisa
 import java.util.*
 import javax.persistence.*
+import javax.validation.constraints.NotNull
 
 @Entity
 @Table(name = "pesquisa")
 class Pesquisa (
 
-
+    @NotNull
     val tipoPesquisa: TipoPesquisa,
 
-    //@field:NotBlank
+    @NotNull
     val qtdMoradores: String = "",
 
     //@field:NotBlank
+    @NotNull
     val qtdCriancas: String = "",
 
+    @NotNull
     @OneToMany(cascade = [CascadeType.ALL], fetch = FetchType.LAZY)
     val moradores: List<Morador>,
 
+    @NotNull
     val tipoAbastecimento: Abastecimento,
 
+    @NotNull
     val acessoDistribuicao: Boolean = false,
 
-    //@field:NotBlank
+    @NotNull
     val aguaEncanada: String = "",
 
-    //@field:NotBlank
+    @NotNull
     val qtdBanheiro: String = "",
 
-    //@field:NotBlank
+    @NotNull
     val esgoto: String = "",
 
-    //@field:NotBlank
+    @NotNull
     val lixo: String = "",
 
+    @NotNull
     val falecimento: Boolean = false,
 
+    @NotNull
     val dataPesquisa: Date = Date(),
 
     @Id
