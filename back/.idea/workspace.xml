@@ -24,8 +24,29 @@
   <component name="ChangeListManager">
     <list default="true" id="187cc6e0-9de9-4ec0-8c65-a696d9918e05" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/enum/Abastecimento.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/enum/Abastecimento.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/service/PesquisaService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/service/PesquisaService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/api/PesquisaResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/api/PesquisaResponse.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/model/Morador.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/model/Morador.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/model/Pesquisa.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/model/Pesquisa.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/CensoTela.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/CensoTela.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/DemaisInfoDomicilioTela.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/DemaisInfoDomicilioTela.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/DemaisMoradoresTela.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/DemaisMoradoresTela.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/EtapasTela.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/EtapasTela.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/FaceTela.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/FaceTela.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/FacesTela.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/FacesTela.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/InfoDemaisMoradoresTela.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/InfoDemaisMoradoresTela.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/InfoDomicilioTela.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/InfoDomicilioTela.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/InfoMoradorTela.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/InfoMoradorTela.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/InicioTela.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/InicioTela.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/MenuPesquisa.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/MenuPesquisa.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/MoradorTela.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/MoradorTela.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/MoradoresTela.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/MoradoresTela.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/MortalidadeTela.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/MortalidadeTela.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/UnidadeTela.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/UnidadeTela.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/res/layout/morador_tela.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/res/layout/morador_tela.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/res/navigation/nav_graph.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/res/navigation/nav_graph.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,14 +75,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/Users/nataliareginalimasilva/Documents/Projetos/censo-brasil-app/back/src/main/resources",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.General"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/nataliareginalimasilva/Documents/Projetos/censo-brasil-app/back/src/main/resources&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.General&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
