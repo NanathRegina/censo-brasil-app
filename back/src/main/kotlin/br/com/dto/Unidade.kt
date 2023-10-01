@@ -1,6 +1,7 @@
 package br.com.dto
 
 import br.com.enum.*
+import org.jetbrains.annotations.Nullable
 import javax.persistence.*
 import javax.validation.constraints.NotBlank
 import javax.validation.constraints.NotNull
@@ -20,6 +21,7 @@ class Unidade (
     val numero: String? = "",
 
     //TODO: pode ser nulo
+    @Nullable
     val modificador: TipoModificador?,
 
     //TODO: pode ser nulo
