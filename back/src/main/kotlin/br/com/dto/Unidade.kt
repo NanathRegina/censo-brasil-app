@@ -21,7 +21,7 @@ class Unidade (
     val numero: String? = "",
 
     //TODO: pode ser nulo
-    @Nullable
+    //@Nullable
     val modificador: TipoModificador?,
 
     //TODO: pode ser nulo
