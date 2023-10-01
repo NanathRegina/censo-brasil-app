@@ -11,7 +11,11 @@ import com.censobrasilapp.databinding.MenuPesquisaBinding
 import com.censobrasilapp.model.Pesquisa
 import org.json.JSONArray
 import org.json.JSONObject
+import java.time.Clock
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 import java.util.Objects
+import java.util.TimeZone
 
 
 class MenuPesquisa : Fragment() {
@@ -23,7 +27,7 @@ class MenuPesquisa : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = MenuPesquisaBinding.inflate(inflater, container, false)
         return binding.root
 
@@ -34,8 +38,6 @@ class MenuPesquisa : Fragment() {
 
         var pesquisa = Pesquisa()
             pesquisa.tipoPesquisa = "PRESENCIAL"
-
-        //tipoPesquisa.put("tipoPesquisa","PRESENCIAL")
 
         binding.buttonPresencial.setOnClickListener {
             findNavController().navigate(MenuPesquisaDirections.actionMenuPesquisaToEtapasTela(pesquisa))

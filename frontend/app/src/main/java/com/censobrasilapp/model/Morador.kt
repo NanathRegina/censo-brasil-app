@@ -13,13 +13,11 @@ data class Morador(
     var dataNascimento: String = "",
     val idadeAnos: String = "",
     val idadeMeses: String = "",
-    // val cor: Cor,
-    //val formaRenda: Renda,
-    val cor: String = "",
-    val formaRenda: String = "",
+    var cor: String = "",
+    var formaRenda: String = "",
     val valor: Double = 0.0,
-    //val faixaRendimento: Rendimento,
-    val faixaRendimento: String = "",
+    var faixaRendimento: String = "",
     val respondente: String = "",
-    val idMorador: Long? = 0L
+    val idMorador: Long? = 0L,
+    var leitura: Boolean = true,
 )

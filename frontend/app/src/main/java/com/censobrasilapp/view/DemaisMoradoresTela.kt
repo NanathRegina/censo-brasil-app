@@ -13,12 +13,10 @@ class DemaisMoradoresTela : Fragment() {
 
     private var _binding: DemaisMoradoresTelaBinding? = null
     private val binding get() = _binding!!
-    private val items_cor = listOf("Branca", "Preta", "Amarela", "Parda", "Indínena")
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         _binding = DemaisMoradoresTelaBinding.inflate(inflater, container, false)
         return binding.root

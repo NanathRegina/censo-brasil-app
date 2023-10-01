@@ -4,16 +4,14 @@ import com.censobrasilapp.model.Morador
 import com.censobrasilapp.model.Pesquisa
 import kotlinx.serialization.Contextual
 import kotlinx.serialization.Serializable
+import java.time.LocalDateTime
 import java.util.Date
 
 @Serializable
 data class PesquisaResponse(
-    //val tipoPesquisa: TipoPesquisa,
     val tipoPesquisa: String,
     val qtdMoradores: String,
     val qtdCriancas: String,
-    //val moradores: List<Morador>,
-    //val tipoAbastecimento: Abastecimento,
     @Contextual
     val moradores: List<Morador>,
     val tipoAbastecimento: String,
@@ -23,6 +21,7 @@ data class PesquisaResponse(
     val esgoto: String,
     val lixo: String,
     val falecimento: Boolean,
+    @Contextual
     val dataPesquisa: String,
     val idPesquisa: Long?
 )

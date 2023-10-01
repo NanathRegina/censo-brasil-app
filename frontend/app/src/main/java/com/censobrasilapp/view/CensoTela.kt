@@ -26,7 +26,7 @@ class CensoTela : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         _binding = CensoTelaBinding.inflate(inflater, container, false)
         return binding.root
@@ -40,8 +40,6 @@ class CensoTela : Fragment() {
         binding.indicator.setProgressCompat(15, true)
 
         binding.buttonPesquisa.setOnClickListener {
-            //var quantidadePessoas = getInput()
-            //Log.i("teste", quantidadePessoas.toString())
             findNavController().navigate(CensoTelaDirections.actionCensoTelaToMoradorTela(getInput()))
         }
 
@@ -63,47 +61,8 @@ class CensoTela : Fragment() {
         var pesquisa = args.tipoPesquisa
         pesquisa.qtdMoradores = qtdMoradores
         pesquisa.qtdCriancas = qtdCriancas
-        //val pesquisaJson = JSONObject()
-        //pesquisaJson.put("qtdMoradores", qtdMoradores)
-        //pesquisaJson.put("qtdCriancas", qtdCriancas)
-
-
-        //var pesquisa = pesquisaJson.put("",args.tipoPesquisa)
-
-        //Log.d("output", pesquisaJson.toString())
 
         return pesquisa
 
     }
-    /*
-    fun createPesquisa(moradores: String, criancas: String) {
-        val retrofitClient = NetworkUtils
-            .getRetrofitInstance()
-
-        val endpoint = retrofitClient.create(Endpoints::class.java)
-        val callback = endpoint.createPesquisa(
-            Pesquisa(args.tipoPesquisa,moradores,
-                criancas, listOf(
-                    Morador("Nat", "Silva", "F",
-                        "2023-09-18T01:23:30.127+00:00", "1", "0",
-                        "PARDA","DINHEIRO", 10.0, "FAIXA1","Nat",
-                        null)
-                ), "CHUVA",false,
-                "sim", "sim", "não", "sim", true,
-                "2023-09-18T01:23:30.127+00:00", null)
-        )
-
-        callback.enqueue(object : Callback<Pesquisa> {
-            override fun onFailure(call: Call<Pesquisa>, t: Throwable) {
-            }
-
-            override fun onResponse(call: Call<Pesquisa>, response: Response<Pesquisa>) {
-                Log.i("create",response.toString())
-                Log.i("create",response.body().toString())
-            }
-        })
-
-    }
-
-     */
 }

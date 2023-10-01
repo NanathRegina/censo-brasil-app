@@ -2,24 +2,27 @@ package com.censobrasilapp.model
 
 
 
+import kotlinx.serialization.Contextual
 import kotlinx.serialization.Serializable
+import java.time.LocalDate
+import java.time.LocalDateTime
+import java.util.Calendar
 import java.util.Date
 
 @Serializable
 data class Pesquisa(
-    //val tipoPesquisa: TipoPesquisa,
     var tipoPesquisa: String = "",
     var qtdMoradores: String = "",
     var qtdCriancas: String = "",
     var moradores: List<Morador>? = listOf(Morador()),
-    //val tipoAbastecimento: Abastecimento,
-    val tipoAbastecimento: String = "",
-    val acessoDistribuicao: Boolean = true,
-    val aguaEncanada: String = "",
-    val qtdBanheiro: String = "",
-    val esgoto: String = "",
-    val lixo: String = "",
-    val falecimento: Boolean = false,
-    val dataPesquisa: String = "",
+    var tipoAbastecimento: String = "",
+    var acessoDistribuicao: Boolean = true,
+    var aguaEncanada: String = "",
+    var qtdBanheiro: String = "",
+    var esgoto: String = "",
+    var lixo: String = "",
+    var falecimento: Boolean = false,
+    @Contextual
+    var dataPesquisa: String = "",
     val idPesquisa: Long? = 0L
 ): java.io.Serializable

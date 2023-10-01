@@ -82,9 +82,14 @@ Deseja continuar para criação de nova face?</string>
     <string name="txt_mortalidade">De janeiro de 2019 a julho de 2022, faleceu alguma pessoa que morava com você(s)?</string>
     <string name="btn_finalizar_mortalidade">Finalizar</string>
 
-    <!-- Tela de informações adicionais do morador -->
+    <!-- Pop up sucesso cadastrar pesquisa -->
     <string name="popup_finalizar">Pesquisa concluída</string>
     <string name="btn_popup_finalizar">OK</string>
+
+    <!-- Pop up erro cadastrar pesquisa -->
+    <string name="popup_finalizar_erro">Não foi possível salvar a pesquisa</string>
+    <string name="popup_erro_titulo">Erro</string>
+    <string name="btn_popup_finalizar_erro">OK</string>
 
     <!-- Tela adicionar face -->
     <string name="adc_face_titulo">Adicionar face</string>

@@ -112,6 +112,10 @@
         <action
             android:id="@+id/action_MoradoresTela_to_InfoDomicilioTela"
             app:destination="@id/InfoDomicilioTela" />
+
+        <argument
+            android:name="pesquisa"
+            app:argType="com.censobrasilapp.model.Pesquisa" />
     </fragment>
 
     <fragment
@@ -123,6 +127,10 @@
         <action
             android:id="@+id/action_DemaisMoradoresTela_to_InfoDemaisMoradoresTela"
             app:destination="@id/InfoDemaisMoradoresTela" />
+
+        <argument
+            android:name="pesquisa"
+            app:argType="com.censobrasilapp.model.Pesquisa" />
     </fragment>
 
     <fragment
@@ -134,6 +142,10 @@
         <action
             android:id="@+id/action_InfoDemaisMoradoresTela_to_InfoDomicilioTela"
             app:destination="@id/InfoDomicilioTela" />
+
+        <argument
+            android:name="pesquisa"
+            app:argType="com.censobrasilapp.model.Pesquisa" />
     </fragment>
 
     <fragment
@@ -145,6 +157,10 @@
         <action
             android:id="@+id/action_InfoDomicilioTela_to_DemaisInfoDomicilioTela"
             app:destination="@id/DemaisInfoDomicilioTela" />
+
+        <argument
+            android:name="pesquisa"
+            app:argType="com.censobrasilapp.model.Pesquisa" />
     </fragment>
 
     <fragment
@@ -156,6 +172,10 @@
         <action
             android:id="@+id/action_DemaisInfoDomicilioTela_to_MortalidadeTela"
             app:destination="@id/MortalidadeTela" />
+
+        <argument
+            android:name="pesquisa"
+            app:argType="com.censobrasilapp.model.Pesquisa" />
     </fragment>
 
     <fragment
@@ -167,6 +187,10 @@
         <action
             android:id="@+id/action_MortalidadeTela_to_FacesTela"
             app:destination="@id/FacesTela" />
+
+        <argument
+            android:name="pesquisa"
+            app:argType="com.censobrasilapp.model.Pesquisa" />
     </fragment>
 
     <fragment

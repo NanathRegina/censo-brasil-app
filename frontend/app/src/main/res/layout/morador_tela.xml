@@ -75,7 +75,7 @@
                     android:id="@+id/radio_button_feminino"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/radio_feminino"/>
+                    android:text="@string/radio_feminino" />
 
                 <RadioButton
                     android:id="@+id/radio_button_masculino"

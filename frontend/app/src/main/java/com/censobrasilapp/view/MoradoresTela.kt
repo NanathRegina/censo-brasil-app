@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.censobrasilapp.R
 import com.censobrasilapp.api.Endpoints
 import com.censobrasilapp.databinding.MoradoresTelaBinding
@@ -22,10 +23,12 @@ class MoradoresTela : Fragment() {
     private var _binding: MoradoresTelaBinding? = null
     private val binding get() = _binding!!
 
+    private val args by navArgs<MoradoresTelaArgs>()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         _binding = MoradoresTelaBinding.inflate(inflater, container, false)
         return binding.root
@@ -38,11 +41,11 @@ class MoradoresTela : Fragment() {
         binding.indicator.setProgressCompat(50, true)
 
         binding.buttonAdcMorador.setOnClickListener {
-            findNavController().navigate(R.id.action_MoradoresTela_to_DemaisMoradoresTela)
+            findNavController().navigate(MoradoresTelaDirections.actionMoradoresTelaToDemaisMoradoresTela(args.pesquisa))
         }
 
         binding.buttonMoradores.setOnClickListener {
-            findNavController().navigate(R.id.action_MoradoresTela_to_InfoDomicilioTela)
+            findNavController().navigate(MoradoresTelaDirections.actionMoradoresTelaToInfoDomicilioTela (args.pesquisa))
         }
 
     }

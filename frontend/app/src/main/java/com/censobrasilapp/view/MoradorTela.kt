@@ -15,6 +15,9 @@ import com.censobrasilapp.databinding.MoradorTelaBinding
 import com.censobrasilapp.model.Morador
 import com.censobrasilapp.model.Pesquisa
 import com.google.android.material.textfield.TextInputLayout
+import java.text.SimpleDateFormat
+import java.time.LocalDate
+import java.util.Date
 
 class MoradorTela : Fragment() {
 
@@ -26,7 +29,7 @@ class MoradorTela : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         _binding = MoradorTelaBinding.inflate(inflater, container, false)
         return binding.root
@@ -37,12 +40,7 @@ class MoradorTela : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.indicator.setProgressCompat(30, true)
-        //Log.i("tesste", args.tipoPesquisa)
         binding.buttonMorador.setOnClickListener {
-            Log.i("a hora da verdade", getInput().toString())
-            //var quantidadePessoas = getInput()
-            //quantidadePessoas.put("", args.tipoPesquisa)
-            //findNavController().navigate(R.id.action_MoradorTela_to_InfoMoradorTela)
             findNavController().navigate(MoradorTelaDirections.actionMoradorTelaToInfoMoradorTela(getInput()))
         }
     }
@@ -62,8 +60,6 @@ class MoradorTela : Fragment() {
 
         val sexoInputLayout: RadioGroup = requireView().findViewById(R.id.radio_group_sexo)
         val sexoMorador : String = requireView().findViewById<RadioButton?>(sexoInputLayout.checkedRadioButtonId).text.toString()
-            //(findViewById(radioGroup.getCheckedRadioButtonId()) as RadioButton).text.toString()
-        //val sexoMorador: String = sexoInputLayout.editText?.text.toString()
 
         val nascimentoInputLayout: TextInputLayout = requireView().findViewById(R.id.input_nascimento)
         val nascimentoMorador: String = nascimentoInputLayout.editText?.text.toString()
@@ -74,20 +70,17 @@ class MoradorTela : Fragment() {
         morador.nome= nomeMorador
         morador.sobrenome = sobrenomeMorador
         morador.sexo = sexoMorador
-        morador.dataNascimento = nascimentoMorador
+
+        var dia  = nascimentoMorador.split("/")[0]
+        var mes  = nascimentoMorador.split("/")[1]
+        var ano  = nascimentoMorador.split("/")[2]
+
+        var dataFormatada = "$ano-$mes-$dia"
+
+        val formatter = LocalDate.parse(dataFormatada)
+        morador.dataNascimento = formatter.toString()
 
         pesquisa.moradores = listOf(morador)
-
-
-        /*
-        val pesquisaJson = JSONObject()
-        pesquisaJson.put("nome", nomeMorador)
-        pesquisaJson.put("sobrenome", sobrenomeMorador)
-        pesquisaJson.put("sexo", sexoMorador)
-        pesquisaJson.put("dataNascimento", nascimentoMorador)
-        pesquisaJson.put("",args.)
-        Log.d("output", pesquisaJson.toString())
-*/
         return pesquisa
 
     }

@@ -23,7 +23,7 @@ class InfoDemaisMoradoresTela : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         _binding = InfoDemaisMoradoresTelaBinding.inflate(inflater, container, false)
         return binding.root

@@ -38,7 +38,7 @@ class FaceTela : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         _binding = FaceTelaBinding.inflate(inflater, container, false)
         return binding.root
@@ -55,17 +55,17 @@ class FaceTela : Fragment() {
 
         cepEditText.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                Log.i("before", "oi")
+
             }
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                Log.i("on", "oi")
+
             }
 
             override fun afterTextChanged(s: Editable) {
                 validaCampos(view)
 
-                Log.i("after", s.toString())
+
             }
             })
 

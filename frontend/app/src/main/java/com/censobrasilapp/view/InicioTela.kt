@@ -28,7 +28,7 @@ class InicioTela : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         _binding = InicioBinding.inflate(inflater, container, false)
 
@@ -39,9 +39,8 @@ class InicioTela : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        //getPesquisa()
         binding.buttonInicio.setOnClickListener {
-            //createPesquisa()
+
             findNavController().navigate(R.id.action_FirstFragment_to_FacesTela)
         }
     }
@@ -51,25 +50,6 @@ class InicioTela : Fragment() {
         _binding = null
     }
 
-    fun getPesquisa() {
-        val retrofitClient = NetworkUtils
-            .getRetrofitInstance()
-
-        val endpoint = retrofitClient.create(Endpoints::class.java)
-        val callback = endpoint.getPesquisa()
-
-        callback.enqueue(object : Callback<Pesquisa> {
-            override fun onFailure(call: Call<Pesquisa>, t: Throwable) {
-                Log.i("pesquisa-erro", t.toString())
-                //Toast.makeText(baseContext, t.message, Toast.LENGTH_SHORT).show()
-            }
-
-            override fun onResponse(call: Call<Pesquisa>, response: Response<Pesquisa>) {
-                Log.i("pesquisa2",response.body().toString())
-            }
-        })
-
-    }
 
 
 }

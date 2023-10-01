@@ -21,7 +21,7 @@ class EtapasTela : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         _binding = EtapasTelaBinding.inflate(inflater, container, false)
         return binding.root
