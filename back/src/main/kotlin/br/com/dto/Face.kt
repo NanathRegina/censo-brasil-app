@@ -8,9 +8,6 @@ import javax.persistence.*
 @Entity
 @Table(name = "face")
 class Face(
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long = 0L,
 
     @NotNull
     val quadra: String = "",
@@ -37,8 +34,13 @@ class Face(
     val qtdUnidades: String = "",
 
     @NotNull
-    @OneToMany(mappedBy = "id")
+    //@OneToMany(mappedBy = "id")
+    @OneToMany(cascade = [CascadeType.ALL], fetch = FetchType.LAZY)
     val unidades: List<Unidade>,
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    val id: Long = 0L
     ){
 
 
