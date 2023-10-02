@@ -76,11 +76,11 @@ class FacesTela : Fragment() {
 
         buscaFaces(
             onSuccessGetFaces = {
-                // TODO: lista de faces
+                //Lista de faces
                 Log.d("teste", it.size.toString())
             },
             onRequestError = {
-                // TODO: quando a requisição falhar
+                //implementação para quando a requisição falhar
             }
         )
         //Log.i("faces", faces.toString())
