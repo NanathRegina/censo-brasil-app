@@ -13,7 +13,6 @@ import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.censobrasilapp.R
-import com.censobrasilapp.api.Endpoints
 import com.censobrasilapp.databinding.FaceTelaBinding
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout

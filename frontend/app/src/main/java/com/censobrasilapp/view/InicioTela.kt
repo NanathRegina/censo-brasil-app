@@ -8,17 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.censobrasilapp.R
-import com.censobrasilapp.api.Endpoints
 import com.censobrasilapp.databinding.InicioBinding
-import com.censobrasilapp.model.Morador
-import com.censobrasilapp.model.Pesquisa
-import com.censobrasilapp.utils.NetworkUtils
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
-import java.sql.Timestamp
-import java.time.LocalDate
-import java.util.Date
 
 class InicioTela : Fragment() {
 

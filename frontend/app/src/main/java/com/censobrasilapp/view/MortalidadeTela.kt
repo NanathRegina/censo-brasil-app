@@ -12,7 +12,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.censobrasilapp.R
-import com.censobrasilapp.api.Endpoints
+import com.censobrasilapp.api.PesquisaServiceApi
 import com.censobrasilapp.databinding.MortalidadeTelaBinding
 import com.censobrasilapp.model.Pesquisa
 import com.censobrasilapp.utils.NetworkUtils
@@ -20,12 +20,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import java.text.SimpleDateFormat
-import java.time.Instant
 import java.time.LocalDateTime
-import java.util.Calendar
-import java.util.Date
-import java.util.Locale
 
 class MortalidadeTela : Fragment() {
 
@@ -108,7 +103,7 @@ class MortalidadeTela : Fragment() {
         val retrofitClient = NetworkUtils
             .getRetrofitInstance()
 
-        val endpoint = retrofitClient.create(Endpoints::class.java)
+        val endpoint = retrofitClient.create(PesquisaServiceApi::class.java)
         pesquisa.dataPesquisa = LocalDateTime.now().toString()
         val callback = endpoint.createPesquisa(pesquisa)
 

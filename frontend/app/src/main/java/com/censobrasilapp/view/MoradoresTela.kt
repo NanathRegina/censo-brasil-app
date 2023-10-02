@@ -8,15 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.censobrasilapp.R
-import com.censobrasilapp.api.Endpoints
 import com.censobrasilapp.databinding.MoradoresTelaBinding
-import com.censobrasilapp.model.Morador
-import com.censobrasilapp.model.Pesquisa
-import com.censobrasilapp.utils.NetworkUtils
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 class MoradoresTela : Fragment() {
 

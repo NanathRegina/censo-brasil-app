@@ -7,7 +7,7 @@ import retrofit2.http.GET
 import retrofit2.http.POST
 
 
-interface Endpoints {
+interface PesquisaServiceApi {
 
     @GET("api/v1/pesquisas/1/")
     fun getPesquisa() : Call<Pesquisa>
