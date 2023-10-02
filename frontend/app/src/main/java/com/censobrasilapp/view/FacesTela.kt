@@ -35,7 +35,26 @@ class FacesTela : Fragment() {
     private lateinit var activityContext: Context
     private val binding get() = _binding!!
 
-    var array = arrayOf("Melbourne", "Vienna", "Vancouver", "Toronto", "Calgary", "Adelaide", "Perth", "Auckland", "Helsinki", "Hamburg", "Munich", "New York", "Sydney", "Paris", "Cape Town", "Barcelona", "London", "Bangkok")
+    var array = arrayOf(
+        "Melbourne",
+        "Vienna",
+        "Vancouver",
+        "Toronto",
+        "Calgary",
+        "Adelaide",
+        "Perth",
+        "Auckland",
+        "Helsinki",
+        "Hamburg",
+        "Munich",
+        "New York",
+        "Sydney",
+        "Paris",
+        "Cape Town",
+        "Barcelona",
+        "London",
+        "Bangkok"
+    )
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -55,23 +74,34 @@ class FacesTela : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
-        var faces = buscaFaces()
+        buscaFaces(
+            onSuccessGetFaces = {
+                // TODO: lista de faces
+                Log.d("teste", it.size.toString())
+            },
+            onRequestError = {
+                // TODO: quando a requisição falhar
+            }
+        )
         //Log.i("faces", faces.toString())
         //setContentView(activityContext, R.layout.activity_main)
-        binding.listview1.apply { setAdapter(
-            ArrayAdapter(
-                activityContext,
-                R.layout.listview_item,
-                array
+        binding.listview1.apply {
+            setAdapter(
+                ArrayAdapter(
+                    activityContext,
+                    R.layout.listview_item,
+                    array
+                )
             )
-        ) }
+        }
 
-        val adapter = ArrayAdapter(activityContext,
-            R.layout.listview_item, array)
+        val adapter = ArrayAdapter(
+            activityContext,
+            R.layout.listview_item, array
+        )
 
-        val listView:ListView = requireView().findViewById(R.id.listview_1)
-            //findViewById(R.id.listview_1)
+        val listView: ListView = requireView().findViewById(R.id.listview_1)
+        //findViewById(R.id.listview_1)
         listView.adapter = adapter
 
         binding.buttonAdcFace.setOnClickListener {
@@ -101,35 +131,32 @@ class FacesTela : Fragment() {
             .show()
     }
 
-      fun buscaFaces(): List<Face>?{
+    private fun buscaFaces(
+        onSuccessGetFaces: (List<Face>) -> Unit,
+        onRequestError: () -> Unit
+    ) {
         val retrofitClient = NetworkUtils
             .getRetrofitInstance()
 
         val endpoint = retrofitClient.create(FaceServiceApi::class.java)
         val callback = endpoint.getFaces()
 
-        var faces = mutableListOf<Face>()
 
         callback.enqueue(object : Callback<List<Face>> {
             override fun onFailure(call: Call<List<Face>>, t: Throwable) {
                 Log.i("[buscaFaces] Erro ao buscar as faces: ", t.toString())
+                onRequestError()
             }
 
             override fun onResponse(call: Call<List<Face>>, response: Response<List<Face>>) {
-                Log.i("[buscaFaces] Sucesso!",response.body().toString())
-                if(response.isSuccessful){
-                response.body()?.forEach {
-
-                    //faces?.plus(it)
-                    faces.add(it)
-                    Log.i("teste final", faces.toString())
-                }
+                if (response.isSuccessful && !response.body().isNullOrEmpty()) {
+                    onSuccessGetFaces.invoke(response.body()!!)
+                } else {
+                    onRequestError()
                 }
             }
 
         })
-        Log.i("antes do return", faces.toString())
-        return faces
     }
 
 }
