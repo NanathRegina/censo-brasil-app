@@ -22,30 +22,21 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="187cc6e0-9de9-4ec0-8c65-a696d9918e05" name="Default Changelist" comment="">
+    <list default="true" id="187cc6e0-9de9-4ec0-8c65-a696d9918e05" name="Default Changelist" comment="finalizando criacao de pesquisa">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/enum/Abastecimento.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/enum/Abastecimento.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/service/PesquisaService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/service/PesquisaService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/dto/Face.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/dto/Face.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/dto/Morador.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/dto/Morador.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/dto/Pesquisa.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/dto/Pesquisa.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/dto/Unidade.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/dto/Unidade.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/api/PesquisaResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/api/PesquisaResponse.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/model/Morador.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/model/Morador.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/model/Pesquisa.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/model/Pesquisa.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/CensoTela.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/CensoTela.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/DemaisInfoDomicilioTela.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/DemaisInfoDomicilioTela.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/DemaisMoradoresTela.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/DemaisMoradoresTela.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/EtapasTela.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/EtapasTela.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/api/FaceServiceApi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/api/FaceServiceApi.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/model/Face.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/model/Face.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/utils/NetworkUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/utils/NetworkUtils.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/FaceTela.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/FaceTela.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/FacesTela.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/FacesTela.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/InfoDemaisMoradoresTela.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/InfoDemaisMoradoresTela.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/InfoDomicilioTela.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/InfoDomicilioTela.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/InfoMoradorTela.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/InfoMoradorTela.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/InicioTela.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/InicioTela.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/MenuPesquisa.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/MenuPesquisa.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/MoradorTela.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/MoradorTela.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/MoradoresTela.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/MoradoresTela.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/MortalidadeTela.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/MortalidadeTela.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/UnidadeTela.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/view/UnidadeTela.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/res/layout/morador_tela.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/res/layout/morador_tela.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/res/layout/face_tela.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/res/layout/face_tela.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/res/layout/faces_tela.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/res/layout/faces_tela.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/res/layout/listview_item.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/res/navigation/nav_graph.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/res/navigation/nav_graph.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,8 +88,8 @@
       <recent name="com" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
-      <recent name="br.com.enum" />
       <recent name="br.com.dto" />
+      <recent name="br.com.enum" />
       <recent name="br.com.controller" />
       <recent name="br.com.repository" />
       <recent name="br.com.service" />
@@ -131,6 +122,31 @@
       <option name="presentableId" value="Default" />
       <updated>1692815511334</updated>
     </task>
+    <task id="LOCAL-00001" summary="adding git ignore">
+      <option name="closed" value="true" />
+      <created>1696126242158</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1696126242158</updated>
+    </task>
+    <task id="LOCAL-00002" summary="ajustes para o front">
+      <option name="closed" value="true" />
+      <created>1696126309179</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1696126309179</updated>
+    </task>
+    <task id="LOCAL-00003" summary="finalizando criacao de pesquisa">
+      <option name="closed" value="true" />
+      <created>1696126332898</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1696126332898</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -143,5 +159,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="adding git ignore" />
+    <MESSAGE value="ajustes para o front" />
+    <MESSAGE value="finalizando criacao de pesquisa" />
+    <option name="LAST_COMMIT_MESSAGE" value="finalizando criacao de pesquisa" />
   </component>
 </project>

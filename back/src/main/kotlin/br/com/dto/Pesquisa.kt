@@ -16,7 +16,6 @@ class Pesquisa (
     @NotNull
     val qtdMoradores: String = "",
 
-    //@field:NotBlank
     @NotNull
     val qtdCriancas: String = "",
 

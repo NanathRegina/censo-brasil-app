@@ -19,15 +19,12 @@ class Morador(
     @NotNull
     val sexo: String = "",
 
-    //@NotNull
     //TODO: pode ser nulo
     val dataNascimento: Date? = Date(),
 
-    //@NotNull
     //TODO: pode ser nulo
     val idadeAnos: String? = "",
 
-    //@NotNull
     val idadeMeses: String? = "",
 
     @NotNull
@@ -39,15 +36,12 @@ class Morador(
     @NotNull
     val formaRenda: Renda,
 
-    //@NotNull
     //TODO: pode ser nulo
     val valor: Double? = 0.0,
 
-    //@NotNull
     //TODO: pode ser nulo
     val faixaRendimento: Rendimento?,
 
-    //@NotNull
     //TODO: pode ser nulo
     val respondente: String? = "",
 

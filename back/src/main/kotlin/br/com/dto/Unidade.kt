@@ -16,12 +16,10 @@ class Unidade (
     @NotNull
     val identificacao: Boolean = false,
 
-    //@field:NotBlank
     //TODO: pode ser nulo
     val numero: String? = "",
 
     //TODO: pode ser nulo
-    //@Nullable
     val modificador: TipoModificador?,
 
     //TODO: pode ser nulo
@@ -30,25 +28,18 @@ class Unidade (
     //TODO: pode ser nulo
     val referencia: String? = "",
 
-    //TODO: falta complemento
-    /*
-    @OneToMany(mappedBy = "id")
+    @NotNull
+    @OneToMany(cascade = [CascadeType.ALL], fetch = FetchType.LAZY)
     val complemento: List<Complemento>,
-     */
 
     @NotNull
     val coordenada: String = "",
 
     @NotNull
-    val status: Status
+    val status: Status,
+
+    @NotNull
+    @OneToOne(cascade = [CascadeType.ALL], fetch = FetchType.LAZY)
+    val especie: Especie
     ){
-
-    /*
-    @OneToMany(mappedBy = "id")
-    val especie: List<Especie>,
-
-     */
-
-
-
 }
