@@ -28,6 +28,7 @@ class FaceController(
 
     @PostMapping("/face")
     fun criaFace(@RequestBody @Valid face: Face): Face {
+        println(face.toString())
         return faceService.criaFace(face)
     }
 }

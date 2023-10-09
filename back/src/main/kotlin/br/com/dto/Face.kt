@@ -35,7 +35,7 @@ class Face(
 
     @NotNull
     @OneToMany(cascade = [CascadeType.ALL], fetch = FetchType.LAZY)
-    val unidade: List<Unidade>,
+    val unidades: List<Unidade>,
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
