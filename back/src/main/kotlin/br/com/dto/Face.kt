@@ -31,7 +31,7 @@ class Face(
     val status: StatusFace,
 
     @NotNull
-    val qtdUnidades: String = "",
+    var qtdUnidades: String = "",
 
     @NotNull
     @OneToMany(cascade = [CascadeType.ALL], fetch = FetchType.LAZY)

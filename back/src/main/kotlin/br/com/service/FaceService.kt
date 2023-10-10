@@ -28,8 +28,14 @@ class FaceService (
     }
 
     fun listaFaces(): List<Face> {
+
+        var listaFaces :List<Face>
         try {
-            return repository.findAll().toList()
+            listaFaces = repository.findAll().toList()
+            listaFaces.forEach{face ->
+                face.qtdUnidades= face.unidades.count().toString()
+            }
+            return listaFaces
         }catch (ex: Exception){
             throw ex
         }
@@ -39,6 +45,15 @@ class FaceService (
     fun criaFace(face: Face): Face {
         try {
             return repository.save(face)
+        }catch (ex: Exception){
+            throw ex
+        }
+    }
+
+    fun apagaFace(idFace: Long) {
+        //TODO: tratar exception de face n encontrada
+        try {
+            return repository.deleteById(idFace)
         }catch (ex: Exception){
             throw ex
         }
