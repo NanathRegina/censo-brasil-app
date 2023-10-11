@@ -24,18 +24,12 @@
   <component name="ChangeListManager">
     <list default="true" id="187cc6e0-9de9-4ec0-8c65-a696d9918e05" name="Default Changelist" comment="finalizando criacao de pesquisa">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/controller/FacesController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/controller/FaceController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/dto/Face.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/dto/Face.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/controller/FaceController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/controller/FaceController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/controller/UnidadeController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/controller/UnidadeController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/service/FaceService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/service/FaceService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/back-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/back-1.0-SNAPSHOT.jar.original" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/service/UnidadeService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/service/UnidadeService.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/controller/FaceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/controller/FaceController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/dto/Face.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/dto/Face.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/service/FaceService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/service/FaceService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/api/FaceServiceApi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/api/FaceServiceApi.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/model/Face.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/model/Face.kt" afterDir="false" />

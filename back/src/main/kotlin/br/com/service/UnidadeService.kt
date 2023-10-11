@@ -49,4 +49,13 @@ class UnidadeService (
         }
     }
 
+    fun apagaUnidade(idUnidade: Long) {
+        //TODO: tratar exception de face n encontrada
+        try {
+            return repository.deleteById(idUnidade)
+        }catch (ex: Exception){
+            throw ex
+        }
+    }
+
 }

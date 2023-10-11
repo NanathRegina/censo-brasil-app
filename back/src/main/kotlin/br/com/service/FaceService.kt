@@ -15,7 +15,8 @@ import javax.persistence.EntityNotFoundException
 
 @Service
 class FaceService (
-    private val repository: FaceRepository
+    private val repository: FaceRepository,
+    private val serviceUnidade: UnidadeService
 ){
 
     fun listaFace(idFace: Long): Face {
@@ -53,6 +54,10 @@ class FaceService (
     fun apagaFace(idFace: Long) {
         //TODO: tratar exception de face n encontrada
         try {
+            listaFace(idFace).unidades.forEach{
+                unidade -> serviceUnidade.apagaUnidade(unidade.id)
+            }
+
             return repository.deleteById(idFace)
         }catch (ex: Exception){
             throw ex

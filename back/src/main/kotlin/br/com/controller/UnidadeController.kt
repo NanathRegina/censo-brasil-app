@@ -16,7 +16,7 @@ class UnidadeController(
     @Autowired
     private val unidadeService: UnidadeService
 ) {
-    //TODO: validacção de contrato não está funcionando
+    //TODO: validação de contrato não está funcionando
 
     @GetMapping("/")
     fun listaUnidades(): ResponseEntity<List<Unidade>> {

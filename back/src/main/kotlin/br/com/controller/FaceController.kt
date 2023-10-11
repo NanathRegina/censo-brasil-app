@@ -33,7 +33,7 @@ class FaceController(
     }
 
     @DeleteMapping("/{idFace}")
-    fun apagaFace(@PathVariable idFace: Long): ResponseEntity<Unit>{
-        return ResponseEntity.ok(faceService.apagaFace(idFace))
+    fun apagaFace(@PathVariable idFace: Long){
+        return faceService.apagaFace(idFace)
     }
 }
