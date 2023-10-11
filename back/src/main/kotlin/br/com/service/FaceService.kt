@@ -32,11 +32,14 @@ class FaceService (
 
         var listaFaces :List<Face>
         try {
+            return repository.findAll().toList()
+            /*
             listaFaces = repository.findAll().toList()
             listaFaces.forEach{face ->
                 face.qtdUnidades= face.unidades.count().toString()
             }
             return listaFaces
+            */
         }catch (ex: Exception){
             throw ex
         }
