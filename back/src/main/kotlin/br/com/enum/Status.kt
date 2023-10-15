@@ -6,5 +6,6 @@ enum class Status(
     NAO_INICIADO("Não iniciado"),
     EM_ANDAMENTO("Em andamento"),
     PENDENTE("Pendente"),
-    FINALIZADO("Finalizado")
+    FINALIZADO("Finalizado"),
+    EMPTY("")
 }

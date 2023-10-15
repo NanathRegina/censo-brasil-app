@@ -16,16 +16,12 @@ class Unidade (
     @NotNull
     val identificacao: Boolean = false,
 
-    //TODO: pode ser nulo
     val numero: String? = "",
 
-    //TODO: pode ser nulo
     val modificador: TipoModificador?,
 
-    //TODO: pode ser nulo
     val tipoReferencia: TipoReferencia?,
 
-    //TODO: pode ser nulo
     val referencia: String? = "",
 
     @NotNull

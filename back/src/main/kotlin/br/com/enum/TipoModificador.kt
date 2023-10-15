@@ -7,5 +7,6 @@ enum class TipoModificador(
     FNS("FNS"),
     SMS("SMS"),
     FUNASA("FUNASA"),
-    KM("KM")
+    KM("KM"),
+    EMPTY("")
 }
