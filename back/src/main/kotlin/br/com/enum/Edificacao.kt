@@ -7,5 +7,6 @@ enum class Edificacao(
     CASA_VILA("Casa de vila ou condomínio"),
     APARTAMENTO("Apartamento"),
     HABITACAO_INDIGENA("Habitação indígena"),
-    HABITACAO_COMODOS("Habitação em casa de cômodos")
+    HABITACAO_COMODOS("Habitação em casa de cômodos"),
+    EMPTY("")
 }

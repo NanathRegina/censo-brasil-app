@@ -24,7 +24,6 @@
   <component name="ChangeListManager">
     <list default="true" id="187cc6e0-9de9-4ec0-8c65-a696d9918e05" name="Default Changelist" comment="finalizando criacao de pesquisa">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/enum/Domicilio.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/enum/Domicilio.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/api/FaceServiceApi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/main/java/com/censobrasilapp/api/FaceServiceApi.kt" afterDir="false" />

@@ -18,7 +18,7 @@ class Especie(
     @NotNull
     val emailResponsavel: String? = "",
 
-    //@NotNull
+    @NotNull
     val especieDomicilio: Domicilio,
 
     @NotNull
