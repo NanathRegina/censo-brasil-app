@@ -202,6 +202,10 @@
         <action
             android:id="@+id/action_FaceTela_to_UnidadeTela"
             app:destination="@id/UnidadeTela" />
+
+        <action
+            android:id="@+id/action_FaceTela_to_FacesTela"
+            app:destination="@id/FacesTela" />
     </fragment>
 
     <fragment
@@ -211,7 +215,64 @@
         tools:layout="@layout/unidade_tela">
 
         <action
-            android:id="@+id/action_UnidadeTela_to_UnidadeTela"
-            app:destination="@id/UnidadeTela" />
+            android:id="@+id/action_UnidadeTela_to_CoordenadaTela"
+            app:destination="@id/CoordenadaTela" />
+
+        <argument
+            android:name="face"
+            app:argType="com.censobrasilapp.model.Face" />
     </fragment>
+
+    <fragment
+        android:id="@+id/CoordenadaTela"
+        android:name="com.censobrasilapp.view.CoordenadaTela"
+        android:label="@string/adc_coordenada_label"
+        tools:layout="@layout/coordenada_tela">
+
+        <action
+            android:id="@+id/action_CoordenadaTela_to_EspeciesTela"
+            app:destination="@id/EspeciesTela" />
+
+        <argument
+            android:name="face"
+            app:argType="com.censobrasilapp.model.Face" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/EspeciesTela"
+        android:name="com.censobrasilapp.view.EspeciesTela"
+        android:label="@string/adc_especies_label"
+        tools:layout="@layout/especies_tela">
+
+        <action
+            android:id="@+id/action_EspeciesTela_to_EspecieTela"
+            app:destination="@id/EspecieTela" />
+
+        <argument
+            android:name="face"
+            app:argType="com.censobrasilapp.model.Face" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/EspecieTela"
+        android:name="com.censobrasilapp.view.EspecieTela"
+        android:label="@string/adc_especie_label"
+        tools:layout="@layout/especie_tela">
+
+        <action
+            android:id="@+id/action_EspecieTela_to_FacesTela"
+            app:destination="@id/FacesTela" />
+
+        <argument
+            android:name="face"
+            app:argType="com.censobrasilapp.model.Face" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Mapa"
+        android:name="com.censobrasilapp.view.Mapa"
+        android:label="@string/adc_especie_label"
+        tools:layout="@layout/fragment_mapa">
+    </fragment>
+
 </navigation>

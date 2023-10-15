@@ -115,7 +115,13 @@ class MortalidadeTela : Fragment() {
 
             override fun onResponse(call: Call<Pesquisa>, response: Response<Pesquisa>) {
                 Log.i("[createPesquisa] Sucesso!",response.toString())
-                popUpSucesso()
+                if(response.code() == 200) {
+                    popUpSucesso()
+                }
+                else {
+                    //TODO: ao dar erro não sair da tela quando o popup for fechado, tentar de novo
+                    popUpErro()
+                }
             }
         })
 

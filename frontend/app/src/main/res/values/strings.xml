@@ -109,5 +109,29 @@ Deseja continuar para criação de nova face?</string>
     <string name="ref_text">Referência</string>
     <string name="complemento_text">Complementos</string>
 
+    <!-- Tela coordenada -->
+    <string name="adc_coordenada_label">Coordenada</string>
+    <string name="txt_buscar">Buscar coordenada</string>
+    <string name="btn_buscar">Buscar</string>
+    <string name="btn_herdar">Herdar</string>
+    <string name="txt_capturar">Capturar coordenada</string>
+    <string name="btn_confirmar">Confirmar</string>
+
+    <!-- Tela especies -->
+    <string name="adc_especies_label">Espécie</string>
+    <string name="btn_especies">Concluído</string>
+
+    <!-- Tela espécie -->
+    <string name="domicilio_text">Espécie de domicílio</string>
+    <string name="edificacao_text">Tipo de edificação</string>
+    <string name="responsavel_text">Nome do responsável</string>
+    <string name="telefone_text">Telefone</string>
+    <string name="email_text">Email</string>
+    <string name="btn_especie">Confirmar</string>
+    <string name="adc_especie_label">Espécie</string>
+
+    <!-- Pop up erro cadastrar pesquisa -->
+    <string name="popup_finalizar_erro_face">Não foi possível salvar a face</string>
+    <string name="popup_finalizar_face">Face concluída</string>
 
 </resources>

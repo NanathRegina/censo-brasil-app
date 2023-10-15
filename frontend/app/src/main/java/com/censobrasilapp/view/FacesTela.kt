@@ -6,26 +6,22 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
+import android.widget.BaseAdapter
 import android.widget.ListView
-import androidx.databinding.DataBindingUtil.setContentView
+import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.MutableLiveData
+import androidx.fragment.app.FragmentActivity
 import androidx.navigation.fragment.findNavController
 import com.censobrasilapp.R
 import com.censobrasilapp.api.FaceServiceApi
-import com.censobrasilapp.api.PesquisaServiceApi
 import com.censobrasilapp.databinding.FacesTelaBinding
 import com.censobrasilapp.model.Face
-import com.censobrasilapp.model.Pesquisa
 import com.censobrasilapp.utils.NetworkUtils
+import com.google.android.gms.maps.MapFragment
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.await
-import retrofit2.awaitResponse
-import java.time.LocalDateTime
 
 
 class FacesTela : Fragment() {
@@ -35,7 +31,7 @@ class FacesTela : Fragment() {
     private lateinit var activityContext: Context
     private val binding get() = _binding!!
 
-    var array = arrayOf("Melbourne", "Vienna", "Vancouver", "Toronto", "Calgary", "Adelaide", "Perth", "Auckland", "Helsinki", "Hamburg", "Munich", "New York", "Sydney", "Paris", "Cape Town", "Barcelona", "London", "Bangkok")
+    var adapter: MyAdapter? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -55,25 +51,24 @@ class FacesTela : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val fragment: Fragment = Mapa()
 
-        var faces = buscaFaces()
-        //Log.i("faces", faces.toString())
-        //setContentView(activityContext, R.layout.activity_main)
-        binding.listview1.apply { setAdapter(
-            ArrayAdapter(
-                activityContext,
-                R.layout.listview_item,
-                array
-            )
-        ) }
+        childFragmentManager.beginTransaction().replace(R.id.frame_layout, fragment).commit()
 
-        val adapter = ArrayAdapter(activityContext,
-            R.layout.listview_item, array)
 
-        val listView:ListView = requireView().findViewById(R.id.listview_1)
-            //findViewById(R.id.listview_1)
-        listView.adapter = adapter
+        buscaFaces(
+            onSuccessGetFaces = { it ->
 
+                val listView: ListView = requireView().findViewById(R.id.listview_1)
+                adapter = MyAdapter(activityContext, it)
+                listView.adapter = adapter
+
+
+            },
+            onRequestError = {
+                //implementação para quando a requisição falhar
+            }
+        )
         binding.buttonAdcFace.setOnClickListener {
             popUp()
         }
@@ -101,35 +96,75 @@ class FacesTela : Fragment() {
             .show()
     }
 
-      fun buscaFaces(): List<Face>?{
+    fun buscaFaces(
+        onSuccessGetFaces: (List<Face>) -> Unit,
+        onRequestError: () -> Unit
+    ) {
+
         val retrofitClient = NetworkUtils
             .getRetrofitInstance()
 
         val endpoint = retrofitClient.create(FaceServiceApi::class.java)
         val callback = endpoint.getFaces()
 
-        var faces = mutableListOf<Face>()
-
         callback.enqueue(object : Callback<List<Face>> {
             override fun onFailure(call: Call<List<Face>>, t: Throwable) {
                 Log.i("[buscaFaces] Erro ao buscar as faces: ", t.toString())
+                onRequestError()
             }
 
             override fun onResponse(call: Call<List<Face>>, response: Response<List<Face>>) {
-                Log.i("[buscaFaces] Sucesso!",response.body().toString())
-                if(response.isSuccessful){
-                response.body()?.forEach {
+                Log.i("[buscaFaces] Sucesso!", response.body().toString())
 
-                    //faces?.plus(it)
-                    faces.add(it)
-                    Log.i("teste final", faces.toString())
-                }
+                if (response.isSuccessful && !response.body().isNullOrEmpty()) {
+                    onSuccessGetFaces.invoke(response.body()!!)
+                } else {
+                    onRequestError()
                 }
             }
 
         })
-        Log.i("antes do return", faces.toString())
-        return faces
-    }
 
+    }
 }
+
+    class MyAdapter(
+        private val context: Context,
+        private val arrayList: List<Face>
+    ) : BaseAdapter() {
+        private lateinit var status: TextView
+        private lateinit var unidade: TextView
+        private lateinit var logradouro: TextView
+        override fun getCount(): Int {
+            return arrayList.size
+        }
+
+        override fun getItem(position: Int): Any {
+            return position
+        }
+
+        override fun getItemId(position: Int): Long {
+            return position.toLong()
+        }
+
+        override fun getView(position: Int, convertView: View?, parent: ViewGroup): View? {
+            var convertView = convertView
+            convertView = LayoutInflater.from(context).inflate(R.layout.row, parent, false)
+            status = convertView.findViewById(R.id.status)
+            unidade = convertView.findViewById(R.id.unidade)
+            logradouro = convertView.findViewById(R.id.logradouro)
+
+
+            when (arrayList[position].status) {
+                "NAO_INICIADO" -> status.text = "Ainda não respondido"
+                "EM_ANDAMENTO" -> status.text = "Em andamento"
+                "PAUSADO" -> status.text = "Pausado"
+                "FINALIZADO" -> status.text = "Finalizado"
+            }
+
+            unidade.text = "Unidades: " + arrayList[position].qtdUnidades
+            logradouro.text =
+                arrayList[position].quadra + "-" + arrayList[position].id + " - " + arrayList[position].logradouro
+            return convertView
+        }
+    }

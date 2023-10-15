@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.censobrasilapp.view.FaceTela">
+    tools:context="com.censobrasilapp.view.EspecieTela">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -22,11 +22,11 @@
             tools:ignore="MissingConstraints" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/input_quadra"
+            android:id="@+id/input_domicilio"
             android:layout_below="@+id/indicator"
-            android:layout_width="124dp"
+            android:layout_width="300dp"
             android:layout_height="64dp"
-            android:hint="@string/quadra_text"
+            android:hint="@string/domicilio_text"
             tools:ignore="MissingConstraints"
             android:layout_marginTop="120dp"
             android:layout_marginStart="50dp"
@@ -34,7 +34,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
 
             <AutoCompleteTextView
-                android:id="@+id/quadra_auto"
+                android:id="@+id/domicilio_auto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="none" />
@@ -50,39 +50,22 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/input_face"
-            android:layout_below="@+id/indicator"
-            android:layout_width="124dp"
-            android:layout_height="64dp"
-            android:hint="@string/face_text"
-            tools:ignore="MissingConstraints"
-            android:layout_marginTop="120dp"
-            android:layout_marginStart="225dp"
-            android:editable="false">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/face_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/input_logradouro"
-            android:layout_below="@+id/input_quadra"
+            android:id="@+id/input_edificacao"
+            android:layout_below="@+id/input_domicilio"
             android:layout_width="300dp"
             android:layout_height="64dp"
-            android:layout_marginStart="50dp"
+            android:hint="@string/edificacao_text"
+            tools:ignore="MissingConstraints"
             android:layout_marginTop="30dp"
-            android:hint="@string/logradouro_text"
+            android:layout_marginStart="50dp"
             app:errorEnabled="true"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
 
-        <AutoCompleteTextView
-            android:id="@+id/logradouro_auto"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="none" />
+            <AutoCompleteTextView
+                android:id="@+id/edificacao_auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -92,70 +75,68 @@
                 android:maxLines="1"
                 android:textAppearance="?attr/textAppearanceSubtitle1" />
 
-    </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/input_cep"
-            android:layout_below="@+id/input_logradouro"
+            android:id="@+id/input_responsavel"
+            android:layout_below="@+id/input_edificacao"
             android:layout_width="300dp"
             android:layout_height="64dp"
-            android:hint="@string/cep_text"
+            android:hint="@string/responsavel_text"
             tools:ignore="MissingConstraints"
             android:layout_marginTop="30dp"
             android:layout_marginStart="50dp"
             app:errorEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/cep_text"
+                android:id="@+id/responsavel_text"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:maxLength ="8"/>
+                android:layout_height="wrap_content" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/input_bairro"
-            android:layout_below="@+id/input_cep"
+            android:id="@+id/input_telefone"
+            android:layout_below="@+id/input_responsavel"
             android:layout_width="300dp"
             android:layout_height="64dp"
-            android:layout_marginStart="50dp"
+            android:hint="@string/telefone_text"
+            tools:ignore="MissingConstraints"
             android:layout_marginTop="30dp"
-            android:hint="@string/bairro_text"
-            app:errorEnabled="true"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+            android:layout_marginStart="50dp"
+            app:errorEnabled="true">
 
-            <AutoCompleteTextView
-                android:id="@+id/bairro_auto"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/telefone_text"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="none" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="16dp"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:textAppearance="?attr/textAppearanceSubtitle1" />
+                android:layout_height="wrap_content" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <CheckBox
-            android:id="@+id/check_unidade"
-            android:layout_below="@+id/input_bairro"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_email"
+            android:layout_below="@+id/input_telefone"
+            android:layout_width="300dp"
+            android:layout_height="64dp"
+            android:hint="@string/email_text"
+            tools:ignore="MissingConstraints"
+            android:layout_marginTop="30dp"
             android:layout_marginStart="50dp"
-            android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/check_unidade_text"/>
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/proximo_face_btn"
-            android:layout_below="@+id/check_unidade"
+            android:id="@+id/proximo_especie_btn"
+            android:layout_below="@+id/input_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/btn_proximo"
+            android:text="@string/btn_especie"
             android:layout_marginStart="250dp"
             android:layout_marginTop="10dp"
             app:layout_constraintEnd_toEndOf="parent"

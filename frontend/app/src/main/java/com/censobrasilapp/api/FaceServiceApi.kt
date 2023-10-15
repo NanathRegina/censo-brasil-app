@@ -13,4 +13,7 @@ interface FaceServiceApi {
     @GET("api/v1/faces/")
     fun getFaces() : Call<List<Face>>
 
+    @POST("api/v1/faces/face")
+    fun createFace(@Body face: Face) : Call<Face>
+
 }

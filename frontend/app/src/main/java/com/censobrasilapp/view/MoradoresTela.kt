@@ -29,7 +29,8 @@ class MoradoresTela : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        //TODO: incluir mais moradores e incluir ícone de responsável da moradia
+        //TODO: validar quantos moradores foram colocados no início da pesquisa
         binding.indicator.setProgressCompat(50, true)
 
         binding.buttonAdcMorador.setOnClickListener {
