@@ -7,5 +7,6 @@ enum class Domicilio(
     DPPUO("DPPUO"),
     DPPV("DPPV"),
     DPIO("DPIO"),
-    DCCM("DCCM")
+    DCCM("DCCM"),
+    EMPTY("")
 }
