@@ -263,6 +263,10 @@
             android:id="@+id/action_EspecieTela_to_FacesTela"
             app:destination="@id/FacesTela" />
 
+        <action
+            android:id="@+id/action_EspecieTela_to_MenuPesquisa"
+            app:destination="@id/MenuPesquisa" />
+
         <argument
             android:name="face"
             app:argType="com.censobrasilapp.model.Face" />

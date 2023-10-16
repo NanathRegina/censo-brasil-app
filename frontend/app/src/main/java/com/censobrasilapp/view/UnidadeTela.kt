@@ -2,6 +2,7 @@ package com.censobrasilapp.view
 
 import android.content.Context
 import android.os.Bundle
+import android.text.TextUtils
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.RadioButton
 import android.widget.RadioGroup
+import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
@@ -80,16 +82,96 @@ class UnidadeTela : Fragment() {
             )
         }
 
+        binding.idAuto.addTextChangedListener {
+            val idInputLayout: TextInputLayout = view.findViewById(R.id.id_input)
+            val id: String = idInputLayout.editText?.text.toString()
+
+            if(id == "Sim") {
+                binding.numeroInput.isEnabled = true
+                binding.modificadorInput.isEnabled = false
+                binding.refInput.isEnabled = false
+                binding.referenciaInput.isEnabled = false
+            }
+            else{
+                binding.numeroInput.isEnabled = false
+                binding.modificadorInput.isEnabled = true
+                binding.refInput.isEnabled = true
+                binding.referenciaInput.isEnabled = true
+            }
+        }
+
         binding.unidadeBtn.setOnClickListener {
-            Log.i("Unidade tela", getInput().toString())
-            //findNavController().navigate(R.id.action_MoradorTela_to_InfoMoradorTela)
-            findNavController().navigate(UnidadeTelaDirections.actionUnidadeTelaToCoordenadaTela(getInput()))
+            if(validaCampos(view)) {
+                findNavController().navigate(UnidadeTelaDirections.actionUnidadeTelaToCoordenadaTela(getInput()))
+            }
         }
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    private fun validaCampos(view: View): Boolean {
+
+        val idInputLayout: TextInputLayout = view.findViewById(R.id.id_input)
+        val id: String = idInputLayout.editText?.text.toString()
+
+        val numInputLayout: TextInputLayout = view.findViewById(R.id.numero_input)
+        val num: String = numInputLayout.editText?.text.toString()
+
+        val modInputLayout: TextInputLayout = view.findViewById(R.id.modificador_input)
+        val mod: String = modInputLayout.editText?.text.toString()
+
+        val refInputLayout: TextInputLayout = view.findViewById(R.id.ref_input)
+        val ref: String = refInputLayout.editText?.text.toString()
+
+        val referenciaInputLayout: TextInputLayout = view.findViewById(R.id.referencia_input)
+        val referencia: String = referenciaInputLayout.editText?.text.toString()
+
+        if(id.isEmpty()){
+            binding.idInput.requestFocus()
+            binding.idInput.error = "Error"
+            return false
+        }else{
+            binding.idInput.isErrorEnabled = false
+            if(id == "Sim"){
+                if(num.isEmpty()){
+                    binding.numeroInput.requestFocus()
+                    binding.numeroInput.error = "Error"
+                    return false
+                }else{
+                    binding.numeroInput.isErrorEnabled = false
+                }
+            }else{
+                if(mod.isEmpty()){
+                    binding.modificadorInput.requestFocus()
+                    binding.modificadorInput.error = "Error"
+                    return false
+                }else{
+                    binding.modificadorInput.isErrorEnabled = false
+                }
+
+                if(ref.isEmpty()){
+                    binding.refInput.requestFocus()
+                    binding.refInput.error = "Error"
+                    return false
+                }else{
+                    binding.refInput.isErrorEnabled = false
+                }
+
+                if(referencia.isEmpty()){
+                    binding.referenciaInput.requestFocus()
+                    binding.referenciaInput.error = "Error"
+                    return false
+                }else{
+                    binding.referenciaInput.isErrorEnabled = false
+                }
+            }        }
+
+
+        binding.unidadeBtn.isEnabled = true
+        return true
     }
 
     fun getInput(): Face {
@@ -116,13 +198,26 @@ class UnidadeTela : Fragment() {
             unidade.identificacao = false
         }
         unidade.numero = numero
-        unidade.modificador = modificador
-        unidade.tipoReferencia = tipoReferencia
+        unidade.modificador = if(!modificador.isEmpty()) modificador else "EMPTY"
+        unidade.tipoReferencia = transformaDados(tipoReferencia)
         unidade.referencia = referencia
 
         face.unidades = listOf(unidade)
 
         return face
+
+    }
+
+    fun transformaDados(dado: String): String{
+        when (dado) {
+            "Ao lado da(e)(o)" -> return "AO_LADO"
+            "Antes da(e)(o)" -> return "ANTES_DA"
+            "Após a(o)" ->  return "APOS_A"
+            "Em frente a(ao)" ->  return "EM_FRENTE"
+            else -> {
+                return "EMPTY"
+            }
+        }
 
     }
 }

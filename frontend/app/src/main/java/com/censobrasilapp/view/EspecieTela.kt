@@ -17,6 +17,7 @@ import com.censobrasilapp.databinding.UnidadeTelaBinding
 import com.censobrasilapp.model.Face
 import com.censobrasilapp.model.Unidade
 import com.censobrasilapp.utils.NetworkUtils
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.textfield.TextInputLayout
 import retrofit2.Call
 import retrofit2.Callback
@@ -55,7 +56,7 @@ class EspecieTela : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.indicator.setProgressCompat(25, true)
+        binding.indicator.setProgressCompat(70, true)
 
         binding.domicilioAuto.apply {
             setAdapter(
@@ -95,10 +96,10 @@ class EspecieTela : Fragment() {
     fun getInput(): Face {
 
         val domicilioInputLayout: TextInputLayout = requireView().findViewById(R.id.input_domicilio)
-        val domicilio: String = domicilioInputLayout.editText?.text.toString()
+        var domicilio: String = domicilioInputLayout.editText?.text.toString()
 
         val edificacaoInputLayout: TextInputLayout = requireView().findViewById(R.id.input_edificacao)
-        val edificacao: String = edificacaoInputLayout.editText?.text.toString()
+        var edificacao: String = edificacaoInputLayout.editText?.text.toString()
 
         val responsavelInputLayout: TextInputLayout = requireView().findViewById(R.id.input_responsavel)
         val responsavel: String = responsavelInputLayout.editText?.text.toString()
@@ -111,7 +112,9 @@ class EspecieTela : Fragment() {
 
         var face = args.face
 
-        Log.i("especie tela, dentro", face.toString())
+        domicilio = transformaDados(domicilio)
+        edificacao = transformaDados(edificacao)
+
         face.unidades?.forEach { unidade ->
             unidade.especie!!.especieDomicilio = domicilio
             unidade.especie!!.especieEdificio = edificacao
@@ -121,6 +124,25 @@ class EspecieTela : Fragment() {
         }
 
         return face
+
+    }
+
+    fun transformaDados(dado: String): String{
+        when (dado) {
+            "DPPO - Domicílio Particular Permanente Ocupado" -> return "DPPO"
+            "DPPUO - Domicílio Particular Permanente de Uso Ocasional" -> return "DPPUO"
+            "DPPV - Domicílio Particular Permanente Vago" ->  return "DPPV"
+            "DPIO - Domicílio Particular Improvisado Ocupado" ->  return "DPIO"
+            "DCCM - Domicílio Coletivo com Morador" ->  return "DCCM"
+            "Casa" ->  return "CASA"
+            "Casa de vila ou condomínio" ->  return "CASA_VILA"
+            "Apartamento" ->  return "APARTAMENTO"
+            "Habitação em casa de cômodos ou cortiços" ->  return "HABITACAO_COMODOS"
+            "Habitação indígena sem paredes ou maloca" ->  return "HABITACAO_INDIGENA"
+            else -> {
+                return ""
+            }
+        }
 
     }
 
@@ -136,15 +158,38 @@ class EspecieTela : Fragment() {
         callback.enqueue(object : Callback<Face> {
             override fun onFailure(call: Call<Face>, t: Throwable) {
                 Log.i("[createFace] Erro ao cadastrar face: ", t.toString())
-                //popUpErro()
+                popUpErro()
             }
 
             override fun onResponse(call: Call<Face>, response: Response<Face>) {
                 Log.i("[createFace] Sucesso!",response.toString())
-                findNavController().navigate(EspecieTelaDirections.actionEspecieTelaToFacesTela())
-                //popUpSucesso()
+                if(response.code() == 200) {
+                    popUpSucesso()
+                }
+
             }
         })
 
+    }
+
+    fun popUpErro() {
+        MaterialAlertDialogBuilder(activityContext)
+            .setMessage(resources.getString(R.string.popup_finalizar_erro_face))
+            .setTitle(resources.getString(R.string.popup_erro_titulo))
+            .setPositiveButton(resources.getString(R.string.btn_popup_finalizar)) { dialog, which ->
+                findNavController().navigate(EspecieTelaDirections.actionEspecieTelaToFacesTela())
+
+            }
+            .show()
+    }
+
+    fun popUpSucesso() {
+        MaterialAlertDialogBuilder(activityContext)
+            .setMessage(resources.getString(R.string.popup_finalizar_face))
+            .setPositiveButton(resources.getString(R.string.btn_popup_finalizar)) { dialog, which ->
+                findNavController().navigate(EspecieTelaDirections.actionEspecieTelaToMenuPesquisa())
+
+            }
+            .show()
     }
 }

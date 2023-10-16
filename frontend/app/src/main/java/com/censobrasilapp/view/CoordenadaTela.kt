@@ -45,17 +45,19 @@ class CoordenadaTela : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.indicator.setProgressCompat(25, true)
+        binding.indicator.setProgressCompat(50, true)
+
+        val fragment: Fragment = Mapa()
+
+        childFragmentManager.beginTransaction().replace(R.id.frame_layout, fragment).commit()
 
         binding.proximoCoordenadaBtn.setOnClickListener {
             var face = args.face
-            Log.i("face", face.toString())
             face.qtdUnidades = "1"
 
             face.unidades?.forEach { unidade ->
                unidade.coordenada = "-23.5448887,-46.6089089"
             }
-            Log.i("Coordenada tela", face.toString())
             //findNavController().navigate(R.id.action_MoradorTela_to_InfoMoradorTela)
             findNavController().navigate(CoordenadaTelaDirections.actionCoordenadaTelaToEspeciesTela(face))
         }

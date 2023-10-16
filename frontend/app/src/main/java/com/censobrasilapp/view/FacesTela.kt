@@ -7,10 +7,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import android.widget.Button
 import android.widget.ListView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
+import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
 import androidx.navigation.fragment.findNavController
 import com.censobrasilapp.R
 import com.censobrasilapp.api.FaceServiceApi
@@ -32,6 +34,8 @@ class FacesTela : Fragment() {
     private val binding get() = _binding!!
 
     var adapter: MyAdapter? = null
+
+    private lateinit var btnIniciar: Button
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -63,7 +67,6 @@ class FacesTela : Fragment() {
                 adapter = MyAdapter(activityContext, it)
                 listView.adapter = adapter
 
-
             },
             onRequestError = {
                 //implementação para quando a requisição falhar
@@ -71,10 +74,6 @@ class FacesTela : Fragment() {
         )
         binding.buttonAdcFace.setOnClickListener {
             popUp()
-        }
-
-        binding.buttonFaces.setOnClickListener {
-            findNavController().navigate(R.id.action_FacesTela_to_MenuPesquisa)
         }
     }
 
@@ -88,7 +87,7 @@ class FacesTela : Fragment() {
             .setTitle(resources.getString(R.string.popup_faces))
             .setMessage(resources.getString(R.string.popup_message_faces))
             .setPositiveButton(resources.getString(R.string.btn_popup_sim)) { dialog, which ->
-                findNavController().navigate(R.id.action_FacesTela_to_FaceTela)
+                findNavController().navigate(FacesTelaDirections.actionFacesTelaToFaceTela())
             }
             .setNegativeButton(resources.getString(R.string.btn_popup_nao)) { dialog, which ->
 
@@ -131,10 +130,12 @@ class FacesTela : Fragment() {
     class MyAdapter(
         private val context: Context,
         private val arrayList: List<Face>
+
     ) : BaseAdapter() {
         private lateinit var status: TextView
         private lateinit var unidade: TextView
         private lateinit var logradouro: TextView
+        private lateinit var btnIniciar: Button
         override fun getCount(): Int {
             return arrayList.size
         }
@@ -153,13 +154,20 @@ class FacesTela : Fragment() {
             status = convertView.findViewById(R.id.status)
             unidade = convertView.findViewById(R.id.unidade)
             logradouro = convertView.findViewById(R.id.logradouro)
-
+            btnIniciar = convertView.findViewById(R.id.button_faces)
 
             when (arrayList[position].status) {
                 "NAO_INICIADO" -> status.text = "Ainda não respondido"
                 "EM_ANDAMENTO" -> status.text = "Em andamento"
                 "PAUSADO" -> status.text = "Pausado"
                 "FINALIZADO" -> status.text = "Finalizado"
+            }
+
+            when (arrayList[position].status) {
+                "NAO_INICIADO" -> btnIniciar.isEnabled = true
+                "EM_ANDAMENTO" -> btnIniciar.isEnabled = true
+                "PAUSADO" -> btnIniciar.isEnabled = true
+                "FINALIZADO" -> btnIniciar.isEnabled = false
             }
 
             unidade.text = "Unidades: " + arrayList[position].qtdUnidades

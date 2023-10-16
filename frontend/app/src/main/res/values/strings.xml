@@ -132,6 +132,6 @@ Deseja continuar para criação de nova face?</string>
 
     <!-- Pop up erro cadastrar pesquisa -->
     <string name="popup_finalizar_erro_face">Não foi possível salvar a face</string>
-    <string name="popup_finalizar_face">Face concluída</string>
+    <string name="popup_finalizar_face">Preenchimento da face concluída</string>
 
 </resources>

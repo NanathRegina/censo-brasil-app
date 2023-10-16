@@ -96,6 +96,7 @@ class FaceTela : Fragment() {
                 }
             }
             else{
+
                 if(validaCampos(view)) {
                     findNavController().navigate(
                         FaceTelaDirections.actionFaceTelaToUnidadeTela(
@@ -103,7 +104,9 @@ class FaceTela : Fragment() {
                         )
                     )
 
-                }}}
+                }
+                }
+                }
     }
 
     fun createFace(face: Face) {
@@ -177,7 +180,7 @@ class FaceTela : Fragment() {
         val cepInputLayout: TextInputLayout = view.findViewById(R.id.input_cep)
         val cep: String = cepInputLayout.editText?.text.toString()
 
-        if (verificaCampoVazio(cep) || cep.length < 8) {
+        if (cep.isEmpty() || cep.length < 8) {
             binding.inputCep.requestFocus()
             binding.inputCep.error = "Informe CEP válido"
 
@@ -200,10 +203,6 @@ class FaceTela : Fragment() {
 
         binding.proximoFaceBtn.isEnabled = true
         return true
-    }
-
-    private fun verificaCampoVazio(valor: String): Boolean {
-        return TextUtils.isEmpty(valor) || valor.trim { it <= ' ' }.isEmpty()
     }
 
     override fun onDestroyView() {
